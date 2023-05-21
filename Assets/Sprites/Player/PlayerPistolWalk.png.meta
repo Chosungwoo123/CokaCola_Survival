@@ -120,9 +120,9 @@ TextureImporter:
       name: PlayerPistolWalk_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 32
+        width: 17
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -141,9 +141,9 @@ TextureImporter:
       name: PlayerPistolWalk_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -162,9 +162,9 @@ TextureImporter:
       name: PlayerPistolWalk_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -183,9 +183,9 @@ TextureImporter:
       name: PlayerPistolWalk_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -204,9 +204,9 @@ TextureImporter:
       name: PlayerPistolWalk_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -225,9 +225,9 @@ TextureImporter:
       name: PlayerPistolWalk_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 175
         y: 0
-        width: 32
+        width: 17
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -246,9 +246,9 @@ TextureImporter:
       name: PlayerPistolWalk_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 207
         y: 0
-        width: 32
+        width: 17
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}
@@ -267,9 +267,9 @@ TextureImporter:
       name: PlayerPistolWalk_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 239
         y: 0
-        width: 32
+        width: 17
         height: 32
       alignment: 9
       pivot: {x: 0.74, y: 0.44}

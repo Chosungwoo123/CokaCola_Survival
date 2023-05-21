@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3688acbed5d51054e8af2d8f96230e88
+guid: bd7dd2608b5a5734083103b95fe1ddd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,223 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerPistolIdle_0
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 904939423e29aa946a5d6986c9c66b24
-      internalID: 319219140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_1
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f54db2ab6abe9d449883e3c5597df624
-      internalID: -1296975219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_2
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97101873596575e4ca9c9f1f113b4875
-      internalID: 1426041149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_3
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17223a363822fbe48b71497c7c4da5eb
-      internalID: 1788542017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_4
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 351d95282d766254c8e18ffcaea39499
-      internalID: 1954967331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_5
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d300595dd95a1a4dad57b4e796752a1
-      internalID: 398032736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_6
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf36708ad592b1644af97844e5edf8f9
-      internalID: 1202623128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_7
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 116a3cc2aaf8a4e47a7d7312c24e2113
-      internalID: -1416996976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_8
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3d09a571ec12c84e891be9a28398f26
-      internalID: -395927082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerPistolIdle_9
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 0
-        width: 17
-        height: 32
-      alignment: 9
-      pivot: {x: 0.74, y: 0.44}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1190cb1dcf7b4b4f9ae36b5f17b5bfb
-      internalID: 798122094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon
+      name: BG02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 15
-        height: 12
+        y: 33
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +131,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 731d9c4791ef0ea4097e58d7033e41a1
-      internalID: -659255486
+      spriteID: 617ede99c355f3248b1aa114383c3a99
+      internalID: -175153255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG02_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6d9252bd321fc40afa392b9cf99f1d
+      internalID: -995401652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG02_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a72f3ddb9f6a043805bbf4c5b6ee0b
+      internalID: 1939697148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG02_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff5ed244fc5a934f9e4df6f866ffd42
+      internalID: -1040710285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG02_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c8945243cfbec49ba658653497d3da
+      internalID: -1295744558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG02_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873c553c3320b274297767809820044f
+      internalID: 2126595600
       vertices: []
       indices: 
       edges: []
@@ -358,17 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerPistolIdle_7: -1416996976
-      PlayerPistolIdle_0: 319219140
-      PlayerPistolIdle_1: -1296975219
-      PlayerPistolIdle_3: 1788542017
-      PlayerPistolIdle_4: 1954967331
-      PlayerPistolIdle_9: 798122094
-      PlayerPistolIdle_8: -395927082
-      PlayerPistolIdle_2: 1426041149
-      Weapon: -659255486
-      PlayerPistolIdle_5: 398032736
-      PlayerPistolIdle_6: 1202623128
+      BG02_2: 1939697148
+      BG02_0: -175153255
+      BG02_1: -995401652
+      BG02_3: -1040710285
+      BG02_5: 2126595600
+      BG02_4: -1295744558
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

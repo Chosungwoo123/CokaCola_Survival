@@ -20,10 +20,12 @@ public class PlayerPistol : MonoBehaviour
     private bool isRun;
 
     private Animator anim;
+    private SpriteRenderer sr;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -38,6 +40,9 @@ public class PlayerPistol : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+
+        GameManager.Instance.playerInputX = x;
+        GameManager.Instance.playerInputY = y;
 
         if (x != 0 || y != 0)
         {
@@ -76,15 +81,15 @@ public class PlayerPistol : MonoBehaviour
 
     private void FlipUpdate()
     {
-        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - shotPos.transform.position;
+        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
-        if(dir.x >= 1f)
+        if(dir.x > 0f)
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            sr.flipX = true;
         }
-        else if (dir.x <= -1f)
+        else if (dir.x < 0f)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            sr.flipX = false;
         }
     }
 }
