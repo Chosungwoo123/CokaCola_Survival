@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public float playerInputX;
     [HideInInspector] public float playerInputY;
 
+    [HideInInspector] public bool isStop = false;
+
     private void Awake()
     {
         if (instance == null)

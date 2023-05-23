@@ -69,9 +69,9 @@ public class PlayerPistol : MonoBehaviour
         {
             Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - shotPos.transform.position;
 
-            var bullet = Instantiate(bulletPrefab, shotPos.transform.position, Quaternion.identity);
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-            bullet.GetComponent<Rigidbody2D>().AddForce(dir.normalized * 7, ForceMode2D.Impulse);
+            Instantiate(bulletPrefab, shotPos.transform.position, Quaternion.Euler(new Vector3(0,0,angle - 90)));
 
             fireTimer = 0f;
         }
@@ -85,11 +85,11 @@ public class PlayerPistol : MonoBehaviour
 
         if(dir.x > 0f)
         {
-            sr.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else if (dir.x < 0f)
         {
-            sr.flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }
