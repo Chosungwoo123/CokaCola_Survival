@@ -18,12 +18,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Space(10)]
+    [Header("플레이어 관련")]
     public GameObject curPlayer;
 
     [HideInInspector] public float playerInputX;
     [HideInInspector] public float playerInputY;
 
     [HideInInspector] public bool isStop = false;
+
+    [Space(10)]
+    [Header("카메라 관련")]
+    [SerializeField] private CameraShake cameraShake;
 
     private void Awake()
     {
@@ -35,5 +41,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void CameraShake(float intensity, float time)
+    {
+        cameraShake.ShakeCamera(intensity, time);
     }
 }

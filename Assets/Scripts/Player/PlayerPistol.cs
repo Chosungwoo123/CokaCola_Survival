@@ -16,6 +16,9 @@ public class PlayerPistol : MonoBehaviour
     public float fireRate;
     private float fireTimer;
 
+    [Space(10)]
+    [Header("ÀÌÆåÆ® °ü·Ã")]
+    [SerializeField] private ParticleSystem fireEffect;
 
     private bool isRun;
 
@@ -71,7 +74,13 @@ public class PlayerPistol : MonoBehaviour
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-            Instantiate(bulletPrefab, shotPos.transform.position, Quaternion.Euler(new Vector3(0,0,angle - 90)));
+            var bullet = PoolManager.Instance.GetGameObejct(bulletPrefab, shotPos.transform.position, Quaternion.Euler(new Vector3(0, 0, angle - 90)));
+
+            bullet.SetActive(true);
+
+            fireEffect.Play();
+
+            GameManager.Instance.CameraShake(4f, 0.1f);
 
             fireTimer = 0f;
         }

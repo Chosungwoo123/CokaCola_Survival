@@ -23,7 +23,7 @@ public class PlayerBullet : MonoBehaviour
             if(count <= 0)
             {
                 // »èÁ¦
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }    
     }

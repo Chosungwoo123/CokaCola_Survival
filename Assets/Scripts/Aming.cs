@@ -7,7 +7,7 @@ public class Aming : MonoBehaviour
     public float angle;
     Vector2 target, mouse;
 
-    [SerializeField] SpriteRenderer weaponSprite;
+    [SerializeField] Transform weapon;
     
     private void Update()
     {
@@ -16,11 +16,11 @@ public class Aming : MonoBehaviour
         angle = Mathf.Atan2(mouse.y - target.y, mouse.x - target.x) * Mathf.Rad2Deg;
         if(Mathf.Abs(angle) < 90)
         {
-            weaponSprite.flipY = true;
+            weapon.localScale = new Vector3(1, -1, 1);
         }
         else
         {
-            weaponSprite.flipY = false;
+            weapon.localScale = new Vector3(1, 1, 1);
         }
         this.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
     }
