@@ -76,7 +76,7 @@ public class PoolManager : MonoBehaviour
     {
         if (poolDictionary.ContainsKey(prefab.GetInstanceID()))
         {
-            GameObject obj = GetGameobjectFromPool(prefab.GetInstanceID());
+            GameObject obj = GetGameobjectFromPool(prefab.GetInstanceID(), prefab);
 
             ResetObject(position, rotation, obj, prefab);
 
@@ -88,14 +88,17 @@ public class PoolManager : MonoBehaviour
         }
     }
 
-    private GameObject GetGameobjectFromPool(int poolKey)
+    private GameObject GetGameobjectFromPool(int poolKey, GameObject prefab)
     {
         GameObject obj = poolDictionary[poolKey].Dequeue();
         poolDictionary[poolKey].Enqueue(obj);
 
         if (obj.gameObject.activeSelf == true)
         {
-            obj.gameObject.SetActive(false);
+            GameObject newObject = Instantiate(prefab, obj.transform.parent.transform);
+            newObject.SetActive(false);
+            obj = newObject;
+            poolDictionary[poolKey].Enqueue(obj);
         }
 
         return obj;

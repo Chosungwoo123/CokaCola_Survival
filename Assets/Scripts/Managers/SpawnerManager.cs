@@ -7,12 +7,13 @@ public class SpawnerManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
 
-    private Transform[] spawnPoints;
     public SpawnData[] spawnDatas;
+
+    private Transform[] spawnPoints;
 
     public int level = 1;
 
-    private float timer = 0;
+    private float timer = 0f;
 
     private void Awake()
     {
@@ -23,16 +24,22 @@ public class SpawnerManager : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+        Debug.Log(spawnDatas[level].spawnTime);
+
         if (timer > spawnDatas[level].spawnTime)
         {
             Spawn();
             timer = 0f;
+            Debug.Log("AA");
         }
     }
 
     private void Spawn()
     {
-        GameObject g;
+        var enemy = PoolManager.Instance.GetGameObejct(enemies[UnityEngine.Random.Range(0, enemies.Length)],
+                    spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+
+        enemy.SetActive(true);
     }
 }
 
