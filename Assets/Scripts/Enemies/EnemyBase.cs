@@ -106,7 +106,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
         else
         {
-            // Á×´Â ÀÌÆåÆ®, Á×±â
+            // ì£½ëŠ” ë¡œì§
         }
     }
 

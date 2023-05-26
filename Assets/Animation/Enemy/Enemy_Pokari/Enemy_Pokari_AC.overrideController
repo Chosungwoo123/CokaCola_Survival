@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy_Pokari_AC
+  m_Controller: {fileID: 9100000, guid: 7a06d67f9af4d4f45a74f9e62bd1bbcd, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: efe10ab8f2c45c24fb28dd1fb697deec, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efe10ab8f2c45c24fb28dd1fb697deec, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 350d71d3dc38871468481fe4f6db66b5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 350d71d3dc38871468481fe4f6db66b5, type: 2}
