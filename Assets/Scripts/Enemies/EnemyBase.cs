@@ -84,6 +84,7 @@ public abstract class EnemyBase : MonoBehaviour
         }
 
         Vector3 playerDir = new Vector3(GameManager.Instance.playerInputX, GameManager.Instance.playerInputY);
+        
         transform.Translate(playerDir * 35 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0f));
     }
 
@@ -97,7 +98,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     public void OnDamage(float damage)
     {
-        //curHealth -= damage;
+        curHealth -= damage;
 
         if(curHealth > 0)
         {
@@ -107,6 +108,7 @@ public abstract class EnemyBase : MonoBehaviour
         else
         {
             // 죽는 로직
+            gameObject.SetActive(false);
         }
     }
 

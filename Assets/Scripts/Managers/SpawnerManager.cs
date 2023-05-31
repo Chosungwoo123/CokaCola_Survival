@@ -7,21 +7,21 @@ public class SpawnerManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
 
-    public SpawnData[] spawnDatas;
+    [SerializeField] private SpawnData[] spawnDatas;
 
-    private Transform[] spawnPoints;
+    [SerializeField] private Transform[] spawnPoints;
 
     public int level = 1;
 
     private float timer = 0f;
 
-    private void Awake()
-    {
-        spawnPoints = GetComponentsInChildren<Transform>();
-    }
-
     private void Update()
     {
+        if(GameManager.Instance.isStop)
+        {
+            return;
+        }
+
         timer += Time.deltaTime;
 
         Debug.Log(spawnDatas[level].spawnTime);

@@ -20,6 +20,7 @@ public class LevelUpManager : MonoBehaviour
             return instance;
         }
     }
+
     private void Awake()
     {
         if (instance == null)
@@ -42,12 +43,14 @@ public class LevelUpManager : MonoBehaviour
 
     public void ShowLevelUpUI()
     {
+        GameManager.Instance.isStop = true;
         levelUpBG.SetActive(true);
         levelUpHandler.LevelItemRoutine();
     }
 
     public void CloseLevelUpUI()
     {
+        GameManager.Instance.isStop = false;
         levelUpBG.SetActive(false);
         levelUpHandler.CloseLevelUPUI();
     }
