@@ -34,6 +34,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Update()
     {
+        #region 게임이 멈췄는지 체크하는 로직
         if (GameManager.Instance.isStop)
         {
             rigid.velocity = Vector2.zero;
@@ -52,6 +53,7 @@ public abstract class EnemyBase : MonoBehaviour
                 animStop = false;
             }
         }
+        #endregion
 
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("HitAnimation"))
         {
@@ -108,6 +110,7 @@ public abstract class EnemyBase : MonoBehaviour
         else
         {
             // 죽는 로직
+            GameManager.Instance.DieCountUp();
             gameObject.SetActive(false);
         }
     }

@@ -21,22 +21,40 @@ public class PlayerPistol : MonoBehaviour
     [SerializeField] private ParticleSystem fireEffect;
 
     private bool isRun;
+    private bool animStop = false;
 
     private Animator anim;
     private SpriteRenderer sr;
+    private Rigidbody2D rigid;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        if(GameManager.Instance.isStop)
+        #region 게임이 멈췄는지 체크하는 로직
+        if (GameManager.Instance.isStop)
         {
+            if (!animStop)
+            {
+                anim.StartPlayback();
+                animStop = true;
+            }
             return;
         }
+        else if (!GameManager.Instance.isStop)
+        {
+            if (animStop)
+            {
+                anim.StopPlayback();
+                animStop = false;
+            }
+        }
+        #endregion
 
         MoveUpdate();
         AnimationUpdate();
