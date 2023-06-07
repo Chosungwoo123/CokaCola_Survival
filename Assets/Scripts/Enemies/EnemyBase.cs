@@ -75,7 +75,7 @@ public abstract class EnemyBase : MonoBehaviour
             return;
         }
 
-        sr.flipX = !(targetPlayer.position.x < transform.position.x);
+        FilpUpdate();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -120,5 +120,19 @@ public abstract class EnemyBase : MonoBehaviour
         yield return null;
         Vector3 dirVec = transform.position - GameManager.Instance.curPlayer.transform.position;
         rigid.AddForce(dirVec.normalized * 2.5f, ForceMode2D.Impulse);
+    }
+
+    private void FilpUpdate()
+    {
+        Vector2 dir = GameManager.Instance.curPlayer.transform.position - transform.position;
+
+        if (dir.x > 0f)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (dir.x < 0f)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 }

@@ -395,7 +395,7 @@ MonoBehaviour:
   - {fileID: 7417171673500355707, guid: eb1c7018e7057354b9a41cfe2618703d, type: 3}
   - {fileID: 4376735893862407210, guid: f6d2e57fee64c2449a271d02df729eb1, type: 3}
   spawnDatas:
-  - spawnTime: 2
+  - spawnTime: 0.2
     health: 100
     speed: 3
   spawnPoints:
@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12, y: -60}
+  m_AnchoredPosition: {x: 24, y: -70}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &70602101
@@ -1013,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -51}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 343.91, y: 94.2}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &277694498
@@ -11526,7 +11526,7 @@ BoxCollider2D:
   m_Offset: {x: -0.13782811, y: -0.12164149}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.74, y: 0.44}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.7083333, y: 1.3333334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -46442,7 +46442,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706391727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.162, y: -0.518, z: 0}
+  m_LocalPosition: {x: 0, y: -0.635, z: 0}
   m_LocalScale: {x: 1.4, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
