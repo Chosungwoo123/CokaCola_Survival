@@ -10,6 +10,11 @@ public class PlayerBullet : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isStop)
+        {
+            return;
+        }
+
         transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
     }
 

@@ -33,6 +33,11 @@ public class PlayerPistol : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.isStop)
+        {
+            return;
+        }
+
         MoveUpdate();
         AnimationUpdate();
         ShotUpdate();
