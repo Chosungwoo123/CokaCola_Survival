@@ -818,8 +818,6 @@ MonoBehaviour:
     prefab: {fileID: 7417171673500355707, guid: eb1c7018e7057354b9a41cfe2618703d, type: 3}
   - poolSize: 30
     prefab: {fileID: 4376735893862407210, guid: f6d2e57fee64c2449a271d02df729eb1, type: 3}
-  - poolSize: 10
-    prefab: {fileID: 8206719925785545828, guid: f3fab43b73f526645ac767ca30238112, type: 3}
 --- !u!4 &152916594
 Transform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0
   weapon: {fileID: 2116580553}
-  effect: {fileID: 0}
 --- !u!1 &453317990
 GameObject:
   m_ObjectHideFlags: 0
