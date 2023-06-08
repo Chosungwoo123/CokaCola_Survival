@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PistolFireEffectMaterial
+  m_Name: GunEffectMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 0bd9b4c500eb0cc42bb1bddd63dff185, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -39,5 +39,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color: {r: 6.13441, g: 2.9225254, b: 2.9225254, a: 0}
+    - _Color: {r: 1.8157103, g: 6.4222345, b: 2.1855774, a: 0}
   m_BuildTextureStacks: []

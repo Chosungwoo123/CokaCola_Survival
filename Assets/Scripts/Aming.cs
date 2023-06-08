@@ -8,6 +8,7 @@ public class Aming : MonoBehaviour
     Vector2 target, mouse;
 
     [SerializeField] Transform weapon;
+    [SerializeField] Transform effect;
     
     private void Update()
     {

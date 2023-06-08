@@ -18,7 +18,7 @@ public class PlayerPistol : MonoBehaviour
 
     [Space(10)]
     [Header("ÀÌÆåÆ® °ü·Ã")]
-    [SerializeField] private ParticleSystem fireEffect;
+    [SerializeField] private GameObject fireEffect;
 
     private bool isRun;
     private bool animStop = false;
@@ -99,11 +99,10 @@ public class PlayerPistol : MonoBehaviour
 
             var bullet = PoolManager.Instance.GetGameObejct(bulletPrefab, shotPos.transform.position, Quaternion.Euler(new Vector3(0, 0, angle - 90)));
 
+            fireEffect.SetActive(true);
             bullet.SetActive(true);
 
-            fireEffect.Play();
-
-            GameManager.Instance.CameraShake(4f, 0.1f);
+            GameManager.Instance.CameraShake(3f, 0.1f);
 
             fireTimer = 0f;
         }

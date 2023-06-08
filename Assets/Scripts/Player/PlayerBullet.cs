@@ -32,4 +32,9 @@ public class PlayerBullet : MonoBehaviour
             }
         }    
     }
+
+    private void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
+    }
 }
