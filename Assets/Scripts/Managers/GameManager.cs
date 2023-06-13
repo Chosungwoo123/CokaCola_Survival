@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     [Header("UI ฐüทร")]
     [SerializeField] private Text dieCountText;
     [SerializeField] private Text timerText;
+    [SerializeField] private Slider expSlider;
 
     [HideInInspector] public int enemyDieCount;
 
