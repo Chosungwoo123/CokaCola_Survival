@@ -844,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 37da8adcdbb688042a0eca8af5de8cd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c369b073b07923428856509ded57f60, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: 165271388}
   - component: {fileID: 165271391}
   - component: {fileID: 165271390}
+  - component: {fileID: 165271392}
   m_Layer: 0
   m_Name: EXP
   m_TagString: Untagged
@@ -1267,6 +1268,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.14583333
+--- !u!114 &165271392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165271387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779669c746148334099cd00946302524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.23
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  target: {fileID: 0}
 --- !u!1 &181090884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192927965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.23, y: 1.42, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11796,7 +11814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.23, y: 1.42, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13013,7 +13031,7 @@ GameObject:
   - component: {fileID: 857429218}
   - component: {fileID: 857429217}
   - component: {fileID: 857429222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerPistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13147,7 +13165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857429216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.23, y: 1.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33427,7 +33445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cfac63be1cd381e4785bee646822a6e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f417b85e2bea5c4f90d3be308e45bd3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33606,6 +33624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460027062}
   - component: {fileID: 1460027063}
+  - component: {fileID: 1460027064}
   m_Layer: 5
   m_Name: EXP
   m_TagString: Untagged
@@ -33682,10 +33701,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.03
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1460027064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460027061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1a4452f5793e942bb8688a8624f589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expBar: {fileID: 1460027063}
 --- !u!1 &1466744988
 GameObject:
   m_ObjectHideFlags: 0
@@ -44148,7 +44180,10 @@ MonoBehaviour:
   dieCountText: {fileID: 597425372}
   timerText: {fileID: 277694498}
   expSlider: {fileID: 0}
+  nextExp: 03000000060000000a00000014000000320000006400000096000000c80000002c01000090010000f4010000
   enemyDieCount: 0
+  curExp: 0
+  playerLevel: 0
   playerInputX: 0
   playerInputY: 0
   isStop: 0

@@ -24,8 +24,6 @@ public class SpawnerManager : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        Debug.Log(spawnDatas[level].spawnTime);
-
         if (timer > spawnDatas[level].spawnTime)
         {
             Spawn();

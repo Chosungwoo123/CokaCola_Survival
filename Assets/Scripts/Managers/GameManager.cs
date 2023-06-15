@@ -20,20 +20,26 @@ public class GameManager : MonoBehaviour
     }
 
     [Space(10)]
-    [Header("플레이어 관련")]
+    [Header("플레이어 관련 오브젝트")]
     public GameObject curPlayer;
 
     [Space(10)]
-    [Header("카메라 관련")]
+    [Header("카메라 관련 오브젝트")]
     [SerializeField] private CameraShake cameraShake;
 
     [Space(10)]
-    [Header("UI 관련")]
+    [Header("UI 관련 오브젝트")]
     [SerializeField] private Text dieCountText;
     [SerializeField] private Text timerText;
     [SerializeField] private Slider expSlider;
 
+    [Space(10)]
+    [Header("게임 관련 변수")]
+    public int[] nextExp;
+
     [HideInInspector] public int enemyDieCount;
+    [HideInInspector] public int curExp = 0;
+    [HideInInspector] public int playerLevel = 0;
 
     [HideInInspector] public float playerInputX;
     [HideInInspector] public float playerInputY;
@@ -65,6 +71,12 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         TimerUpdate();
+
+        // Test
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            GetExp();
+        }
     }
 
     private void TimerUpdate()
@@ -76,8 +88,8 @@ public class GameManager : MonoBehaviour
 
         gameTimer += Time.deltaTime;
 
-        int minTime = Mathf.FloorToInt(gameTimer / 60);
-        int secTime = Mathf.FloorToInt(gameTimer % 60);
+        minTime = Mathf.FloorToInt(gameTimer / 60);
+        secTime = Mathf.FloorToInt(gameTimer % 60);
 
         timerText.text = string.Format("{0:D2}:{1:D2}", minTime, secTime);
     }
@@ -92,5 +104,17 @@ public class GameManager : MonoBehaviour
     public void CameraShake(float intensity, float time)
     {
         cameraShake.ShakeCamera(intensity, time);
+    }
+
+    public void GetExp()
+    {
+        curExp++;
+
+        if(curExp >= nextExp[Mathf.Min(playerLevel, nextExp.Length)])
+        {
+            playerLevel++;
+            curExp = 0;
+            LevelUpManager.Instance.ShowLevelUpUI();
+        }
     }
 }
