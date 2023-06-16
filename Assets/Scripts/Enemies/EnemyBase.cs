@@ -16,12 +16,14 @@ public abstract class EnemyBase : MonoBehaviour
 
     [SerializeField] private GameObject expPrefab;
 
+    Material material;
     Animator anim;
     Rigidbody2D rigid;
     SpriteRenderer sr;
 
     protected virtual void Start()
     {
+        material = GetComponent<SpriteRenderer>().material;
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -32,6 +34,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void OnEnable()
     {
         curHealth = maxHealth;
+        isLive = true;
     }
 
     protected virtual void Update()
@@ -102,6 +105,11 @@ public abstract class EnemyBase : MonoBehaviour
 
     public void OnDamage(float damage)
     {
+        if (!isLive)
+        {
+            return;
+        }
+
         curHealth -= damage;
 
         if(curHealth > 0)
@@ -113,8 +121,10 @@ public abstract class EnemyBase : MonoBehaviour
         {
             // 죽는 로직
             PoolManager.Instance.GetGameObejct(expPrefab, transform.position, Quaternion.identity).SetActive(true);
+            StartCoroutine(DissolveStart());
             GameManager.Instance.DieCountUp();
-            gameObject.SetActive(false);
+            anim.StartPlayback();
+            isLive = false;
         }
     }
 
@@ -123,6 +133,20 @@ public abstract class EnemyBase : MonoBehaviour
         yield return null;
         Vector3 dirVec = transform.position - GameManager.Instance.curPlayer.transform.position;
         rigid.AddForce(dirVec.normalized * 2.5f, ForceMode2D.Impulse);
+    }
+
+    private IEnumerator DissolveStart()
+    {
+        float count = 0;
+
+        while (count < 1)
+        {
+            material.SetFloat("_DIssolveAmount", count);
+            count += Time.deltaTime * 2;
+            yield return null;
+        }
+
+        gameObject.SetActive(false);
     }
 
     private void FilpUpdate()
