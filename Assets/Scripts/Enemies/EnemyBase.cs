@@ -14,6 +14,8 @@ public abstract class EnemyBase : MonoBehaviour
 
     private Transform targetPlayer;
 
+    [SerializeField] private GameObject expPrefab;
+
     Animator anim;
     Rigidbody2D rigid;
     SpriteRenderer sr;
@@ -110,6 +112,7 @@ public abstract class EnemyBase : MonoBehaviour
         else
         {
             // 죽는 로직
+            PoolManager.Instance.GetGameObejct(expPrefab, transform.position, Quaternion.identity).SetActive(true);
             GameManager.Instance.DieCountUp();
             gameObject.SetActive(false);
         }

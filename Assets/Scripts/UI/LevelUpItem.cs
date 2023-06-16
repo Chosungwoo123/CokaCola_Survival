@@ -25,9 +25,9 @@ public class LevelUpItem : MonoBehaviour
 
     IEnumerator ItemClickRoutine()
     {
-        rt.DOAnchorPosY(-1000, 1).SetEase(Ease.InBack);
+        rt.DOAnchorPosY(-1000, 1).SetEase(Ease.InBack).SetUpdate(true);
 
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSecondsRealtime(1.3f);
 
         LevelUpManager.Instance.CloseLevelUpUI();
     }

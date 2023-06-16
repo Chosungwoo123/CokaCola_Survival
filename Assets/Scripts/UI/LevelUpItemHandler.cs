@@ -47,9 +47,9 @@ public class LevelUpItemHandler : MonoBehaviour
         Rects[1].gameObject.SetActive(true);
         Rects[2].gameObject.SetActive(true);
 
-        Rects[0].DOAnchorPosY(0, 1f).SetEase(Ease.OutBack);
-        Rects[1].DOAnchorPosY(0, 1f).SetDelay(0.2f).SetEase(Ease.OutBack);
-        Rects[2].DOAnchorPosY(0, 1f).SetDelay(0.4f).SetEase(Ease.OutBack);
+        Rects[0].DOAnchorPosY(0, 1f).SetEase(Ease.OutBack).SetUpdate(true);
+        Rects[1].DOAnchorPosY(0, 1f).SetDelay(0.2f).SetEase(Ease.OutBack).SetUpdate(true);
+        Rects[2].DOAnchorPosY(0, 1f).SetDelay(0.4f).SetEase(Ease.OutBack).SetUpdate(true);
     }
 
     public void DontClickItemButton()

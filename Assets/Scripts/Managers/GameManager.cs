@@ -117,4 +117,16 @@ public class GameManager : MonoBehaviour
             LevelUpManager.Instance.ShowLevelUpUI();
         }
     }
+
+    public void TimeStop()
+    {
+        isStop = true;
+        Time.timeScale = 0f;
+    }
+
+    public void TimePlay()
+    {
+        isStop = false;
+        Time.timeScale = 1f;
+    }
 }

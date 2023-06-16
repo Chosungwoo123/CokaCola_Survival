@@ -207,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 70
   moveSpeed: 3.5
+  expPrefab: {fileID: 6709771633611217211, guid: a7201fe8a5e848b4f8d28160f48bc6d3, type: 3}
 --- !u!61 &7417171673500355709
 BoxCollider2D:
   m_ObjectHideFlags: 0

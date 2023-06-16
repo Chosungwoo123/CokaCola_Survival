@@ -43,14 +43,14 @@ public class LevelUpManager : MonoBehaviour
 
     public void ShowLevelUpUI()
     {
-        GameManager.Instance.isStop = true;
+        GameManager.Instance.TimeStop();
         levelUpBG.SetActive(true);
         levelUpHandler.LevelItemRoutine();
     }
 
     public void CloseLevelUpUI()
     {
-        GameManager.Instance.isStop = false;
+        GameManager.Instance.TimePlay();
         levelUpBG.SetActive(false);
         levelUpHandler.CloseLevelUPUI();
     }
