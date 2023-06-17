@@ -91,6 +91,7 @@ public class PoolManager : MonoBehaviour
     private GameObject GetGameobjectFromPool(int poolKey, GameObject prefab)
     {
         GameObject obj = poolDictionary[poolKey].Dequeue();
+
         poolDictionary[poolKey].Enqueue(obj);
 
         if (obj.gameObject.activeSelf == true)

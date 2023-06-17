@@ -44040,7 +44040,7 @@ MonoBehaviour:
   cameraShake: {fileID: 192927969}
   dieCountText: {fileID: 597425372}
   timerText: {fileID: 277694498}
-  expSlider: {fileID: 0}
+  levelText: {fileID: 634178737}
   nextExp: 03000000060000000a00000014000000320000006400000096000000c80000002c01000090010000f4010000
   enemyDieCount: 0
   curExp: 0
@@ -44873,7 +44873,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

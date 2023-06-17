@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [Header("UI 관련 오브젝트")]
     [SerializeField] private Text dieCountText;
     [SerializeField] private Text timerText;
-    [SerializeField] private Slider expSlider;
+    [SerializeField] private Text levelText;
 
     [Space(10)]
     [Header("게임 관련 변수")]
@@ -91,7 +91,12 @@ public class GameManager : MonoBehaviour
         minTime = Mathf.FloorToInt(gameTimer / 60);
         secTime = Mathf.FloorToInt(gameTimer % 60);
 
-        timerText.text = string.Format("{0:D2}:{1:D2}", minTime, secTime);
+        timerText.text = $"{minTime:D2}:{secTime:D2}";
+    }
+
+    private void LevelUpdate()
+    {
+        levelText.text = $"Lv.{playerLevel:F0}";
     }
 
     public void DieCountUp()
@@ -114,6 +119,7 @@ public class GameManager : MonoBehaviour
         {
             playerLevel++;
             curExp = 0;
+            LevelUpdate();
             LevelUpManager.Instance.ShowLevelUpUI();
         }
     }
