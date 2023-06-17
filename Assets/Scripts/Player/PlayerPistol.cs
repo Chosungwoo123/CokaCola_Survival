@@ -8,8 +8,9 @@ public class PlayerPistol : MonoBehaviour
 
     [Space(10)]
     [Header("게임 오브젝트")]
-    public GameObject bulletPrefab;
-    public GameObject shotPos;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject shotPos;
+    [SerializeField] private GameObject magnetObj;
 
     [Space(10)]
     [Header("공격 관련")]

@@ -5,9 +5,6 @@ using DG.Tweening;
 
 public class ExpCell : MonoBehaviour
 {
-    [SerializeField] private float radius;
-    [SerializeField] private LayerMask playerLayer;
-
     [SerializeField] private Ease easeType;
 
     [SerializeField] private float moveSpeed;
@@ -21,29 +18,30 @@ public class ExpCell : MonoBehaviour
 
     private void Update()
     {
-        PlayerCheck();
+        MoveUpdate();
     }
-
-    private void PlayerCheck()
+    
+    public void Targetting()
     {
-        Vector3 dir = GameManager.Instance.curPlayer.transform.position - transform.position;
-
         if (!isTargetting)
         {
-            isTargetting = Physics2D.OverlapCircle(transform.position, radius, playerLayer);
-
-            if (isTargetting)
-            {
-                Vector3 temp = transform.position - GameManager.Instance.curPlayer.transform.position;
-
-                Debug.Log(temp.normalized);
-
-                transform.DOMove((transform.position + temp.normalized), 0.5f);
-            }
-
-            return; 
+            Vector3 temp = transform.position - GameManager.Instance.curPlayer.transform.position;
+                
+            transform.DOMove((transform.position + temp.normalized), 0.5f);
         }
+        
+        isTargetting = true;
+    }
 
+    private void MoveUpdate()
+    {
+        if (!isTargetting)
+        {
+            return;
+        }
+        
+        Vector3 dir = GameManager.Instance.curPlayer.transform.position - transform.position;
+        
         transform.position += dir.normalized * moveSpeed * Time.deltaTime;
     }
 
@@ -54,12 +52,5 @@ public class ExpCell : MonoBehaviour
             GameManager.Instance.GetExp();
             gameObject.SetActive(false);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
