@@ -13,16 +13,23 @@ public class PlayerPistol : MonoBehaviour
 
     [Space(10)]
     [Header("공격 관련")]
-    public float fireRate;
-    private float fireTimer;
+    [SerializeField] private float fireRate;
+    
 
     [Space(10)]
     [Header("이펙트 관련")]
     [SerializeField] private GameObject fireEffect;
 
+    private int bulletCount;
+    
     private bool isRun;
     private bool animStop = false;
 
+    private float fireTimer;
+    private float bulletDamage;
+    
+    private Vector3 bulletSize;
+    
     private Animator anim;
     private SpriteRenderer sr;
     private Rigidbody2D rigid;
@@ -89,6 +96,7 @@ public class PlayerPistol : MonoBehaviour
         anim.SetBool("isRun", isRun);
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void ShotUpdate()
     {
         if (fireTimer >= fireRate && Input.GetKey(KeyCode.Mouse0))
@@ -98,6 +106,8 @@ public class PlayerPistol : MonoBehaviour
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
             var bullet = PoolManager.Instance.GetGameObejct(bulletPrefab, shotPos.transform.position, Quaternion.Euler(new Vector3(0, 0, angle - 90)));
+            
+            bullet.GetComponent<PlayerBullet>().InitPlayerBullet(bulletDamage, bulletCount, bulletSize);
 
             fireEffect.SetActive(true);
             bullet.SetActive(true);
@@ -122,5 +132,14 @@ public class PlayerPistol : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+    }
+
+    public void BulletLevelUp(int bulletCount, float bulletDamage, Vector3 bulletSize)
+    {
+        Debug.Log("adfasdf");
+        
+        this.bulletCount = bulletCount;
+        this.bulletDamage = bulletDamage;
+        this.bulletSize = bulletSize;
     }
 }

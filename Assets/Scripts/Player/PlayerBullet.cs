@@ -18,6 +18,13 @@ public class PlayerBullet : MonoBehaviour
         transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
     }
 
+    public void InitPlayerBullet(float damage, int count, Vector3 size)
+    {
+        this.damage = damage;
+        this.count = count;
+        this.transform.localScale = size;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Enemy"))

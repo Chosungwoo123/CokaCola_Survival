@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc57b6258bb2fba42bc064dc46551c35, type: 3}
+  m_Name: PlayerWeaponData_Pistol
+  m_EditorClassIdentifier: 
+  weaponData:
+  - damage: 10
+    weaponCount: 1
+    bulletSize: {x: 1, y: 1, z: 1}
+    weaponDesc: "\uCCAB\uBC88\uCA30\uB77C\uC11C \uC774 \uB0B4\uC6A9\uC740 \uD544\uC694\uC5C6\uB2E4."
+  - damage: 12
+    weaponCount: 2
+    bulletSize: {x: 1, y: 1, z: 1}
+    weaponDesc: "\uB370\uBBF8\uC9C0 \uC99D\uAC00. \uAD00\uD1B5\uB825 \uC99D\uAC00."
+  - damage: 15
+    weaponCount: 3
+    bulletSize: {x: 1.2, y: 1.2, z: 1.2}
+    weaponDesc: "\uB370\uBBF8\uC9C0 \uC99D\uAC00. \uAD00\uD1B5\uB825 \uC99D\uAC00.
+      \uD06C\uAE30 \uC99D\uAC00"
+  - damage: 20
+    weaponCount: 3
+    bulletSize: {x: 1.2, y: 1.2, z: 1.2}
+    weaponDesc: "\uB370\uBBF8\uC9C0 \uC99D\uAC00."
+  - damage: 20
+    weaponCount: 3
+    bulletSize: {x: 1.4, y: 1.4, z: 1.4}
+    weaponDesc: "\uAD00\uD1B5\uB825 \uC99D\uAC00. \uD06C\uAE30 \uC99D\uAC00."
+  weaponIcon: {fileID: 21300000, guid: 8d230f11022e2364b8f37ddf0e082882, type: 3}
+  weaponName: "\uD53C\uC2A4\uD1A8"

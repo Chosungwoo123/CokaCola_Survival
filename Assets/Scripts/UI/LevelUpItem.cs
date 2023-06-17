@@ -14,10 +14,6 @@ public class LevelUpItem : MonoBehaviour
 
     public void ItemClickEvent()
     {
-        // 아이템 레벨업 로직
-
-        Debug.Log(gameObject.name);
-
         LevelUpManager.Instance.levelUpHandler.DontClickItemButton();
 
         StartCoroutine(ItemClickRoutine());
@@ -28,6 +24,11 @@ public class LevelUpItem : MonoBehaviour
         rt.DOAnchorPosY(-1000, 1).SetEase(Ease.InBack).SetUpdate(true);
 
         yield return new WaitForSecondsRealtime(1.3f);
+
+        if (!gameObject.GetComponent<ItemCard>().CheckMaxLevel())
+        {
+            gameObject.GetComponent<ItemCard>().CardLevelUp();
+        }
 
         LevelUpManager.Instance.CloseLevelUpUI();
     }
