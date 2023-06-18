@@ -27,13 +27,17 @@ public abstract class EnemyBase : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-
+        
         targetPlayer = GameManager.Instance.curPlayer.transform;
     }
 
     protected virtual void OnEnable()
     {
-        material.SetFloat("_DIssolveAmount", 0);
+        if (material != null)
+        {
+            material.SetFloat("_DIssolveAmount", 0);
+        }
+
         curHealth = maxHealth;
         isLive = true;
     }
