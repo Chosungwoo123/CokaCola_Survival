@@ -40,14 +40,13 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int enemyDieCount;
     [HideInInspector] public int curExp = 0;
     [HideInInspector] public int playerLevel = 0;
+    [HideInInspector] public int minTime = 0;
+    [HideInInspector] public int secTime = 0;
 
     [HideInInspector] public float playerInputX;
     [HideInInspector] public float playerInputY;
 
     [HideInInspector] public bool isStop = false;
-
-    private int minTime = 0;
-    private int secTime = 0;
 
     private float gameTimer = 0f;
 
@@ -71,12 +70,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         TimerUpdate();
-
-        // Test
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            GetExp();
-        }
     }
 
     private void TimerUpdate()

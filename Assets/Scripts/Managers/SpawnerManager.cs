@@ -11,24 +11,32 @@ public class SpawnerManager : MonoBehaviour
 
     [SerializeField] private Transform[] spawnPoints;
 
-    public int level = 1;
+    [SerializeField] private int curLevel = 0;
 
-    private float timer = 0f;
+    private float spawnTimer = 0f;
+    private float levelUpTimer = 30f;
 
     private void Update()
     {
-        if(GameManager.Instance.isStop)
+        if(GameManager.Instance.isStop || GameManager.Instance.minTime >= 5)
         {
             return;
         }
 
-        timer += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
 
-        if (timer > spawnDatas[level].spawnTime)
+        if (spawnTimer > spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].spawnTime)
         {
             Spawn();
-            timer = 0f;
-            Debug.Log("AA");
+            spawnTimer = 0f;
+        }
+
+        levelUpTimer -= Time.deltaTime;
+
+        if (levelUpTimer <= 0)
+        {
+            curLevel++;
+            levelUpTimer = 30f;
         }
     }
 
@@ -36,6 +44,8 @@ public class SpawnerManager : MonoBehaviour
     {
         var enemy = PoolManager.Instance.GetGameObejct(enemies[UnityEngine.Random.Range(0, enemies.Length)],
                     spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+        
+        enemy.GetComponent<EnemyBase>().InitEnemy(spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].health, spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].speed);
 
         enemy.SetActive(true);
     }

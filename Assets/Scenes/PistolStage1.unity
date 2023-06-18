@@ -331,6 +331,15 @@ MonoBehaviour:
   - spawnTime: 2
     health: 100
     speed: 3
+  - spawnTime: 1.8
+    health: 110
+    speed: 3.3
+  - spawnTime: 1.6
+    health: 140
+    speed: 3.6
+  - spawnTime: 1.4
+    health: 160
+    speed: 4
   spawnPoints:
   - {fileID: 768537601}
   - {fileID: 800508977}
@@ -351,7 +360,7 @@ MonoBehaviour:
   - {fileID: 1608075768}
   - {fileID: 1361091993}
   - {fileID: 900578861}
-  level: 0
+  curLevel: 0
 --- !u!1 &70602099
 GameObject:
   m_ObjectHideFlags: 0
@@ -40772,7 +40781,7 @@ GameObject:
   - component: {fileID: 1630370243}
   - component: {fileID: 1630370244}
   - component: {fileID: 1630370245}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Magnet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41229,6 +41238,8 @@ MonoBehaviour:
   enemyDieCount: 0
   curExp: 0
   playerLevel: 0
+  minTime: 0
+  secTime: 0
   playerInputX: 0
   playerInputY: 0
   isStop: 0

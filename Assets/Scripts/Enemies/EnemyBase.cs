@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    public float maxHealth;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float moveSpeed;
+
     private float curHealth;
-
-    public float moveSpeed;
-
+    
     private bool animStop = false;
     private bool isLive = true;
 
@@ -33,6 +33,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void OnEnable()
     {
+        material.SetFloat("_DIssolveAmount", 0);
         curHealth = maxHealth;
         isLive = true;
     }
@@ -162,5 +163,12 @@ public abstract class EnemyBase : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+    }
+
+    public void InitEnemy(float health, float moveSpeed)
+    {
+        maxHealth = health;
+        curHealth = health;
+        this.moveSpeed = moveSpeed;
     }
 }
