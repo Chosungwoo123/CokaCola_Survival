@@ -34,7 +34,8 @@ public class WeaponLevelCard : ItemCard
     {
         GameManager.Instance.curPlayer.GetComponent<PlayerPistol>().BulletLevelUp(
             weaponData.weaponData[curLevel].weaponCount,
-            weaponData.weaponData[curLevel].damage, weaponData.weaponData[curLevel].bulletSize);
+            weaponData.weaponData[curLevel].damage, weaponData.weaponData[curLevel].bulletSize,
+            weaponData.weaponData[curLevel].fireRate);
         
         curLevel++;
 

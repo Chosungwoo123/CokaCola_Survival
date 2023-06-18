@@ -135,12 +135,11 @@ public class PlayerPistol : MonoBehaviour
         }
     }
 
-    public void BulletLevelUp(int bulletCount, float bulletDamage, Vector3 bulletSize)
+    public void BulletLevelUp(int bulletCount, float bulletDamage, Vector3 bulletSize, float fireRate)
     {
-        Debug.Log("adfasdf");
-        
         this.bulletCount = bulletCount;
         this.bulletDamage = bulletDamage;
         this.bulletSize = bulletSize;
+        this.fireRate = fireRate;
     }
 }

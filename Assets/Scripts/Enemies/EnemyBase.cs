@@ -123,6 +123,7 @@ public abstract class EnemyBase : MonoBehaviour
             PoolManager.Instance.GetGameObejct(expPrefab, transform.position, Quaternion.identity).SetActive(true);
             StartCoroutine(DissolveStart());
             GameManager.Instance.DieCountUp();
+            rigid.velocity = Vector2.zero;
             anim.StartPlayback();
             isLive = false;
         }

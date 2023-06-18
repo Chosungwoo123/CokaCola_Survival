@@ -11960,7 +11960,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3524509556040392780, guid: 17262a5622efafd4580b15662ef70d5d, type: 3}
   shotPos: {fileID: 2066496494}
   magnetObj: {fileID: 1630370242}
-  fireRate: 0.3
+  fireRate: 0.1
   fireEffect: {fileID: 8844651163322151394}
 --- !u!1 &881254289
 GameObject:
