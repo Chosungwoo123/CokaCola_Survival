@@ -7,14 +7,7 @@ using UnityEngine.UI;
 public class WeaponLevelCard : ItemCard
 {
     [SerializeField] private PlayerWeaponData weaponData;
-
-    [SerializeField] private Image weaponIcon;
-    [SerializeField] private Text weaponName;
-    [SerializeField] private Text weaponDesc;
-    [SerializeField] private Text levelText;
-
-    private int curLevel = 0;
-
+    
     private void Start()
     {
         InitLevelCard();

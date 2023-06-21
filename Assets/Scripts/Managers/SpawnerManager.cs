@@ -25,7 +25,7 @@ public class SpawnerManager : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer > spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].spawnTime)
+        if (spawnTimer > spawnDatas[Mathf.Min(curLevel, spawnDatas.Length - 1)].spawnTime)
         {
             Spawn();
             spawnTimer = 0f;

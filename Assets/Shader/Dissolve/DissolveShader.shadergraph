@@ -562,10 +562,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2030.0001220703125,
-            "y": 623.0001220703125,
+            "x": -2025.0001220703125,
+            "y": 579.0,
             "width": 208.0,
-            "height": 314.99993896484377
+            "height": 315.0
         }
     },
     "m_Slots": [
@@ -596,7 +596,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 30.0,
+    "m_Value": 20.0,
     "m_DefaultValue": 500.0,
     "m_Labels": []
 }
@@ -1580,10 +1580,10 @@
     "m_Guid": {
         "m_GuidSerialized": "fa11c07a-4995-467e-9f86-aa5ba85e5d0e"
     },
-    "m_Name": "DIssolveColor",
+    "m_Name": "DissolveColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DIssolveColor",
-    "m_DefaultReferenceName": "_DIssolveColor",
+    "m_RefNameGeneratedByDisplayName": "DissolveColor",
+    "m_DefaultReferenceName": "_DissolveColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1722,7 +1722,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "8252ea6080fa44059022257878daf7b4",
     "m_Id": 0,
-    "m_DisplayName": "DIssolveColor",
+    "m_DisplayName": "DissolveColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1845,10 +1845,10 @@
     "m_Guid": {
         "m_GuidSerialized": "dc2d5eb4-8a57-408f-98e1-e3c57b4f0f2d"
     },
-    "m_Name": "DIssolveAmount",
+    "m_Name": "DissolveAmount",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DIssolveAmount",
-    "m_DefaultReferenceName": "_DIssolveAmount",
+    "m_RefNameGeneratedByDisplayName": "DissolveAmount",
+    "m_DefaultReferenceName": "_DissolveAmount",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1857,7 +1857,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.6000000238418579,
+    "m_Value": 0.5,
     "m_FloatType": 1,
     "m_RangeValues": {
         "x": 0.0,
@@ -2190,7 +2190,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "abf1cb9da1e74bf1872691f3ed48a876",
     "m_Id": 0,
-    "m_DisplayName": "DIssolveAmount",
+    "m_DisplayName": "DissolveAmount",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2868,10 +2868,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1651.0001220703125,
-            "y": 618.0000610351563,
+            "x": -1680.0001220703125,
+            "y": 579.0,
             "width": 208.0,
-            "height": 302.0001220703125
+            "height": 302.0
         }
     },
     "m_Slots": [

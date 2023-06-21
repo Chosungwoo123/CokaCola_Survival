@@ -6,6 +6,7 @@ using DG.Tweening;
 public class LevelUpItem : MonoBehaviour
 {
     RectTransform rt;
+    ItemCard card;
 
     private void Start()
     {

@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -38}
-  m_SizeDelta: {x: 238.4, y: 73.1}
+  m_SizeDelta: {x: 374.9, y: 73.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &12166757
 MonoBehaviour:
@@ -185,7 +185,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2467efa451df8cc48a9b7bd18b5f5f3b, type: 3}
     m_FontSize: 69
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 121
     m_Alignment: 4
@@ -723,13 +723,14 @@ GameObject:
   - component: {fileID: 149782055}
   - component: {fileID: 149782054}
   - component: {fileID: 149782053}
+  - component: {fileID: 149782057}
   m_Layer: 5
   m_Name: ItemList (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &149782052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -843,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 528ff343edf496841b2950a794258479, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -861,6 +862,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149782051}
   m_CullTransparentMesh: 1
+--- !u!114 &149782057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149782051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd69e0e3a4ea4b140afe3eb37b707997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponIcon: {fileID: 2086371316}
+  weaponName: {fileID: 275169361}
+  weaponDesc: {fileID: 823940262}
+  levelText: {fileID: 1915570145}
+  weaponData: {fileID: 11400000, guid: a80c002cafac93243a9e962e967e42fc, type: 2}
 --- !u!1 &152916592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1113,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -38}
-  m_SizeDelta: {x: 238.4, y: 73.1}
+  m_SizeDelta: {x: 374.9, y: 73.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &275169361
 MonoBehaviour:
@@ -1121,7 +1139,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2467efa451df8cc48a9b7bd18b5f5f3b, type: 3}
     m_FontSize: 69
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 121
     m_Alignment: 4
@@ -1475,7 +1493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 528ff343edf496841b2950a794258479, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10868,7 +10886,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4.444444
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11325,7 +11343,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -38}
-  m_SizeDelta: {x: 238.4, y: 73.1}
+  m_SizeDelta: {x: 374.9, y: 73.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &723775010
 MonoBehaviour:
@@ -11351,7 +11369,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2467efa451df8cc48a9b7bd18b5f5f3b, type: 3}
     m_FontSize: 69
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 121
     m_Alignment: 4
@@ -11701,7 +11719,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 528ff343edf496841b2950a794258479, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11788,11 +11806,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2893decf54d1df44c9bf8c3ba36d2168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 1f61018f2451b1840bee3ee6b7d6efcd, type: 2}
   weaponIcon: {fileID: 368865991}
   weaponName: {fileID: 723775010}
   weaponDesc: {fileID: 1655496304}
   levelText: {fileID: 1524930255}
+  weaponData: {fileID: 11400000, guid: 1f61018f2451b1840bee3ee6b7d6efcd, type: 2}
 --- !u!1 &857429216
 GameObject:
   m_ObjectHideFlags: 0
@@ -40966,8 +40984,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706391727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.635, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000029087067, y: -0.6350293, z: 0}
   m_LocalScale: {x: 1.4, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

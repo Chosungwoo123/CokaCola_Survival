@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bac6b1a4f46784387a41567d74c8c3, type: 3}
+  m_Name: ItemData_SpinningCola
+  m_EditorClassIdentifier: 
+  levelData:
+  - damage: 10
+    fireRate: 150
+    weaponSize: {x: 0.24, y: 1, z: 1}
+    itemDesc: "3\uAC1C\uC758 \uCF5C\uB77C\uB97C \uC0DD\uC131\uD569\uB2C8\uB2E4."
+    itemCount: 3
+  - damage: 10
+    fireRate: 150
+    weaponSize: {x: 0.24, y: 1, z: 1}
+    itemDesc: "\uCF5C\uB77C\uAC00 1\uAC1C\n\uCD94\uAC00\uB429\uB2C8\uB2E4."
+    itemCount: 4
+  projectile: {fileID: 6767703950120949448, guid: f749db65c21ee8e46baf8b1937963389, type: 3}
+  itemIcon: {fileID: 21300000, guid: 7fd3cda14282bb7429b8eeb6c121e5bb, type: 3}
+  itemName: "\uD68C\uC804\uD558\uB294 \uCF5C\uB77C"

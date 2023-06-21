@@ -20,6 +20,7 @@ public abstract class EnemyBase : MonoBehaviour
     Animator anim;
     Rigidbody2D rigid;
     SpriteRenderer sr;
+    private static readonly int HitAnimation = Animator.StringToHash("Hit");
 
     protected virtual void Start()
     {
@@ -35,7 +36,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (material != null)
         {
-            material.SetFloat("_DIssolveAmount", 0);
+            material.SetFloat("_DissolveAmount", 0);
         }
 
         curHealth = maxHealth;
@@ -120,7 +121,7 @@ public abstract class EnemyBase : MonoBehaviour
         if(curHealth > 0)
         {
             StartCoroutine(KnockBack());
-            anim.SetTrigger("Hit");
+            anim.SetTrigger(HitAnimation);
         }
         else
         {
@@ -147,8 +148,8 @@ public abstract class EnemyBase : MonoBehaviour
 
         while (count < 1)
         {
-            material.SetFloat("_DIssolveAmount", count);
-            count += Time.deltaTime * 2;
+            material.SetFloat("_DissolveAmount", count);
+            count += Time.deltaTime * 1.5f;
             yield return null;
         }
 

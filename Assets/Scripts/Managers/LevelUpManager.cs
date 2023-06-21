@@ -9,6 +9,8 @@ public class LevelUpManager : MonoBehaviour
     public GameObject levelUpBG;
     public LevelUpItemHandler levelUpHandler;
 
+    private bool isOpenLevelUI = false;
+
     public static LevelUpManager Instance
     {
         get
@@ -35,6 +37,7 @@ public class LevelUpManager : MonoBehaviour
 
     private void Update()
     {
+        // Test
         if(Input.GetKeyDown(KeyCode.K))
         {
             ShowLevelUpUI();
@@ -43,6 +46,12 @@ public class LevelUpManager : MonoBehaviour
 
     public void ShowLevelUpUI()
     {
+        if (isOpenLevelUI)
+        {
+            return;
+        }
+
+        isOpenLevelUI = true;
         GameManager.Instance.TimeStop();
         levelUpBG.SetActive(true);
         levelUpHandler.LevelItemRoutine();
@@ -50,6 +59,7 @@ public class LevelUpManager : MonoBehaviour
 
     public void CloseLevelUpUI()
     {
+        isOpenLevelUI = false;
         GameManager.Instance.TimePlay();
         levelUpBG.SetActive(false);
         levelUpHandler.CloseLevelUPUI();

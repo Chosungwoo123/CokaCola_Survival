@@ -18,6 +18,8 @@ public class ItemData : ScriptableObject
     public struct ItemDateInfo
     {
         public float damage;
+        public float fireRate;
+        public Vector3 weaponSize;
         [TextArea] public string itemDesc;
         public int itemCount;
     }
