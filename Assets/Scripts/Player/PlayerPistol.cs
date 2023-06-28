@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerPistol : MonoBehaviour
 {
+    [Space(10)]
+    [Header("기본 스탯 관련 변수")]
+    public float health;
     public float moveSpeed;
 
     [Space(10)]
@@ -15,7 +18,6 @@ public class PlayerPistol : MonoBehaviour
     [Space(10)]
     [Header("공격 관련")]
     [SerializeField] private float fireRate;
-    
 
     [Space(10)]
     [Header("이펙트 관련")]
