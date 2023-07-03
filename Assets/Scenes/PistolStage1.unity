@@ -328,18 +328,36 @@ MonoBehaviour:
   - {fileID: 7417171673500355707, guid: eb1c7018e7057354b9a41cfe2618703d, type: 3}
   - {fileID: 4376735893862407210, guid: f6d2e57fee64c2449a271d02df729eb1, type: 3}
   spawnDatas:
+  - spawnTime: 3
+    health: 70
+    speed: 1.5
   - spawnTime: 2
     health: 100
-    speed: 3
-  - spawnTime: 1.8
-    health: 110
-    speed: 3.3
-  - spawnTime: 1.6
+    speed: 1.8
+  - spawnTime: 1
+    health: 120
+    speed: 2
+  - spawnTime: 0.9
+    health: 120
+    speed: 2.2
+  - spawnTime: 0.7
+    health: 130
+    speed: 2.4
+  - spawnTime: 0.6
+    health: 130
+    speed: 2.8
+  - spawnTime: 0.5
     health: 140
-    speed: 3.6
-  - spawnTime: 1.4
+    speed: 3
+  - spawnTime: 0.4
+    health: 140
+    speed: 3.3
+  - spawnTime: 0.4
     health: 160
-    speed: 4
+    speed: 3.3
+  - spawnTime: 0.3
+    health: 160
+    speed: 3.3
   spawnPoints:
   - {fileID: 768537601}
   - {fileID: 800508977}
@@ -11983,6 +12001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df9937899d9a0c4285596057fcd61d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   moveSpeed: 4
   bulletPrefab: {fileID: 3524509556040392780, guid: 17262a5622efafd4580b15662ef70d5d, type: 3}
   shotPos: {fileID: 2066496494}
@@ -41252,7 +41271,7 @@ MonoBehaviour:
   dieCountText: {fileID: 597425372}
   timerText: {fileID: 277694498}
   levelText: {fileID: 634178737}
-  nextExp: 03000000060000000a00000014000000320000006400000096000000c80000002c01000090010000f4010000
+  nextExp: 03000000060000000a0000000f0000001e000000320000006400000096000000c80000002c0100005e010000
   enemyDieCount: 0
   curExp: 0
   playerLevel: 0
