@@ -87,8 +87,16 @@ public class PlayerPistol : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        GameManager.Instance.playerInputX = x;
-        GameManager.Instance.playerInputY = y;
+        if (x != 0)
+        {
+            GameManager.Instance.playerInputX = x;
+        }
+        
+        if (y != 0)
+        {
+            GameManager.Instance.playerInputY = y;
+        }
+        
 
         if (x != 0 || y != 0)
         {
