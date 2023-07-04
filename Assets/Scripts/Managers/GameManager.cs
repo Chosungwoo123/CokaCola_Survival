@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text dieCountText;
     [SerializeField] private Text timerText;
     [SerializeField] private Text levelText;
+    [SerializeField] private Slider hpBar;
 
     [Space(10)]
     [Header("게임 관련 변수")]
@@ -127,5 +128,10 @@ public class GameManager : MonoBehaviour
     {
         isStop = false;
         Time.timeScale = 1f;
+    }
+
+    public void SetHpBar(float amount)
+    {
+        hpBar.value = amount;
     }
 }

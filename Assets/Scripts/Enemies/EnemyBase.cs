@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public abstract class EnemyBase : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float attackDamage;
 
     private float curHealth;
     
@@ -80,7 +84,7 @@ public abstract class EnemyBase : MonoBehaviour
         {
             return;
         }
-
+        
         if (!isLive)
         {
             return;
@@ -170,10 +174,24 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
-    public void InitEnemy(float health, float moveSpeed)
+    public void InitEnemy(float health, float moveSpeed, float attackDamage)
     {
         maxHealth = health;
         curHealth = health;
         this.moveSpeed = moveSpeed;
+        this.attackDamage = attackDamage;
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (GameManager.Instance.isStop)
+        {
+            return;
+        }
+        
+        if (other.transform.CompareTag("Player"))
+        {
+            other.transform.GetComponent<PlayerPistol>().OnDamage(Time.deltaTime * attackDamage);
+        }
     }
 }

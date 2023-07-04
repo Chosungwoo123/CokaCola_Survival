@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,8 @@ public class PlayerPistol : MonoBehaviour
 {
     [Space(10)]
     [Header("기본 스탯 관련 변수")]
-    public float health;
-    public float moveSpeed;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float moveSpeed;
 
     [Space(10)]
     [Header("게임 오브젝트")]
@@ -22,6 +23,7 @@ public class PlayerPistol : MonoBehaviour
     [Space(10)]
     [Header("이펙트 관련")]
     [SerializeField] private GameObject fireEffect;
+    [SerializeField] private ParticleSystem hitEffect;
 
     private int bulletCount;
     
@@ -29,6 +31,7 @@ public class PlayerPistol : MonoBehaviour
     private bool animStop = false;
 
     private float fireTimer;
+    private float curHealth;
     private float bulletDamage;
     
     private Vector3 bulletSize;
@@ -42,6 +45,13 @@ public class PlayerPistol : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
+
+        curHealth = maxHealth;
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.SetHpBar(curHealth / maxHealth);
     }
 
     private void Update()
@@ -143,5 +153,21 @@ public class PlayerPistol : MonoBehaviour
         this.bulletDamage = bulletDamage;
         this.bulletSize = bulletSize;
         this.fireRate = fireRate;
+    }
+
+    public void OnDamage(float damage)
+    {
+        curHealth -= damage;
+        
+        GameManager.Instance.SetHpBar(curHealth / maxHealth);
+        
+        GameManager.Instance.CameraShake(2, 0.1f);
+        
+        hitEffect.Emit(1);
+
+        if (curHealth <= 0)
+        {
+            // 죽는 로직
+        }
     }
 }

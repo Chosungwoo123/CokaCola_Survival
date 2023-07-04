@@ -44,8 +44,10 @@ public class SpawnerManager : MonoBehaviour
     {
         var enemy = PoolManager.Instance.GetGameObejct(enemies[UnityEngine.Random.Range(0, enemies.Length)],
                     spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
-        
-        enemy.GetComponent<EnemyBase>().InitEnemy(spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].health, spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].speed);
+
+        enemy.GetComponent<EnemyBase>().InitEnemy(spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].health,
+            spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].speed,
+            spawnDatas[Mathf.Min(curLevel, spawnDatas.Length)].attackDamage);
 
         enemy.SetActive(true);
     }
@@ -57,4 +59,5 @@ public class SpawnData
     public float spawnTime;
     public int health;
     public float speed;
+    public float attackDamage;
 }
