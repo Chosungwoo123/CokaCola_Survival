@@ -6,7 +6,6 @@ using UnityEngine;
 public class SpinningColaCard : ItemCard
 {
     [SerializeField] private ItemData weaponData;
-    private ItemCard itemCardImplementation;
 
     private SpinningCola weaponObj;
 

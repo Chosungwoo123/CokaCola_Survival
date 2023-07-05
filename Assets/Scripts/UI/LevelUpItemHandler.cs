@@ -8,6 +8,7 @@ public class LevelUpItemHandler : MonoBehaviour
 {
     [SerializeField] private GameObject LevelUpBgObject;
     [SerializeField] private RectTransform[] levelUpObject;
+    [SerializeField] private RectTransform[] infiniteItem;
 
     private List<RectTransform> Rects;
 
@@ -32,6 +33,23 @@ public class LevelUpItemHandler : MonoBehaviour
             while (levelUpObject[randomNum].gameObject.activeSelf)
             {
                 randomNum = Random.Range(0, levelUpObject.Length);
+            }
+            
+            // 아이템이 만렙이면 힐팩같은 무한으로 먹을 수 있는 아이템으로 대체
+            if (levelUpObject[randomNum].GetComponent<ItemCard>().CheckMaxLevel())
+            {
+                for (int j = 0; j < infiniteItem.Length; j++)
+                {
+                    if (!infiniteItem[j].gameObject.activeSelf)
+                    {
+                        infiniteItem[j].gameObject.SetActive(true);
+                        infiniteItem[j].gameObject.GetComponent<Button>().interactable = true;
+                        Rects.Add(infiniteItem[j]);
+                        break;
+                    }
+                }
+                
+                continue;
             }
 
             levelUpObject[randomNum].gameObject.SetActive(true);

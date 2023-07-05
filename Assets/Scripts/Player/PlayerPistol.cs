@@ -178,4 +178,11 @@ public class PlayerPistol : MonoBehaviour
             // Á×´Â ·ÎÁ÷
         }
     }
+
+    public void HealHP(float hp)
+    {
+        curHealth = Mathf.Min(curHealth + hp, maxHealth);
+
+        GameManager.Instance.SetHpBar(curHealth / maxHealth);
+    }
 }
