@@ -410,41 +410,41 @@ MonoBehaviour:
     speed: 1.5
     attackDamage: 10
   - spawnTime: 2
-    health: 100
+    health: 80
     speed: 1.8
-    attackDamage: 20
+    attackDamage: 10
   - spawnTime: 1
-    health: 120
+    health: 85
     speed: 2
-    attackDamage: 30
+    attackDamage: 15
   - spawnTime: 0.9
-    health: 120
+    health: 90
     speed: 2.2
-    attackDamage: 40
-  - spawnTime: 0.7
-    health: 130
-    speed: 2.4
-    attackDamage: 50
+    attackDamage: 15
   - spawnTime: 0.6
-    health: 130
-    speed: 2.8
-    attackDamage: 60
+    health: 100
+    speed: 2.4
+    attackDamage: 15
   - spawnTime: 0.5
-    health: 140
+    health: 105
+    speed: 2.8
+    attackDamage: 20
+  - spawnTime: 0.35
+    health: 110
     speed: 3
-    attackDamage: 70
-  - spawnTime: 0.4
-    health: 140
-    speed: 3.3
-    attackDamage: 80
-  - spawnTime: 0.4
-    health: 160
-    speed: 3.3
-    attackDamage: 90
+    attackDamage: 25
   - spawnTime: 0.3
-    health: 160
+    health: 115
     speed: 3.3
-    attackDamage: 100
+    attackDamage: 30
+  - spawnTime: 0.2
+    health: 115
+    speed: 3.3
+    attackDamage: 30
+  - spawnTime: 0.1
+    health: 120
+    speed: 3.3
+    attackDamage: 30
   spawnPoints:
   - {fileID: 768537601}
   - {fileID: 800508977}
@@ -41665,7 +41665,7 @@ MonoBehaviour:
   timerText: {fileID: 277694498}
   levelText: {fileID: 634178737}
   hpBar: {fileID: 2092045000}
-  nextExp: 03000000060000000a0000000f0000001e000000320000006400000096000000c80000002c0100005e010000
+  nextExp: 03000000060000000a0000000f0000001e0000003200000046000000500000005a000000640000006e000000
   enemyDieCount: 0
   curExp: 0
   playerLevel: 0
