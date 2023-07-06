@@ -13,16 +13,16 @@ public class PoppingCanCola : MonoBehaviour
     private int curLevel;
     private int weaponPer;
     
-    private float fireRate;
-    private float damage;
-    private float moveSpeed;
+    public float fireRate;
+    public float damage;
+    public float moveSpeed;
     private float fireTimer;
 
-    private GameObject poppingCanColaPrefab;
+    public GameObject poppingCanColaPrefab;
     
     private RaycastHit2D[] targets;
 
-    private Transform nearestTarget;
+    public Transform nearestTarget;
 
     private ItemData weaponData;
 
@@ -88,7 +88,7 @@ public class PoppingCanCola : MonoBehaviour
 
     private void FireCanCola()
     {
-        if (fireTimer <= 0)
+        if (fireTimer <= 0 && nearestTarget != null)
         {
             GameObject canCola = PoolManager.Instance.GetGameObejct(poppingCanColaPrefab, transform.position, quaternion.identity);
 
@@ -96,9 +96,11 @@ public class PoppingCanCola : MonoBehaviour
             
             Vector3 dir = nearestTarget.position - transform.position;
             
-            canCola.GetComponent<PoppingCanColaWeapon>().InitPoppingCanCola(damage, weaponPer, dir, moveSpeed);
-            
             canCola.SetActive(true);
+
+            canCola.GetComponent<PoppingCanColaWeapon>().InitPoppingCanCola(damage, weaponPer, dir.normalized, 10);
+
+            fireTimer = fireRate;
         }
 
         fireTimer -= Time.deltaTime;
