@@ -22,5 +22,6 @@ public class ItemData : ScriptableObject
         public Vector3 weaponSize;
         [TextArea] public string itemDesc;
         public int itemCount;
+        public float weaponMoveSpeed;
     }
 }

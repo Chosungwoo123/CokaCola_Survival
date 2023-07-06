@@ -911,7 +911,7 @@ GameObject:
   - component: {fileID: 149782053}
   - component: {fileID: 149782057}
   m_Layer: 5
-  m_Name: ItemList (1)
+  m_Name: SpinningColaCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 377850823}
   - component: {fileID: 377850822}
   m_Layer: 5
-  m_Name: ItemList (3)
+  m_Name: HealPackCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 467091843}
   - component: {fileID: 467091847}
   m_Layer: 5
-  m_Name: ItemList (2)
+  m_Name: HealPackCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12543,7 +12543,7 @@ GameObject:
   - component: {fileID: 851214404}
   - component: {fileID: 851214409}
   m_Layer: 5
-  m_Name: ItemList
+  m_Name: PlayerWeaponCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22399,7 +22399,7 @@ GameObject:
   - component: {fileID: 1061010678}
   - component: {fileID: 1061010677}
   m_Layer: 5
-  m_Name: ItemList (4)
+  m_Name: HealPackCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42009,6 +42009,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524930253}
   m_CullTransparentMesh: 1
+--- !u!1 &1564736345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564736346}
+  m_Layer: 0
+  m_Name: PoppingCanCola
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1564736346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564736345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.1030507, y: 5.537513, z: 3.243892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608075767
 GameObject:
   m_ObjectHideFlags: 0

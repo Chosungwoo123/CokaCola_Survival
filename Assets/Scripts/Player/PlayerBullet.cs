@@ -34,7 +34,7 @@ public class PlayerBullet : MonoBehaviour
 
             if(count <= 0)
             {
-                // »èÁ¦
+                // ì‚­ì œ
                 gameObject.SetActive(false);
             }
         }    
