@@ -13,9 +13,9 @@ public class PoppingCanCola : MonoBehaviour
     private int curLevel;
     private int weaponPer;
     
-    public float fireRate;
-    public float damage;
-    public float moveSpeed;
+    private float fireRate;
+    private float damage;
+    private float moveSpeed;
     private float fireTimer;
 
     public GameObject poppingCanColaPrefab;
@@ -29,6 +29,7 @@ public class PoppingCanCola : MonoBehaviour
     private void Update()
     {
         FireCanCola();
+        MoveUpdate();
     }
 
     private void FixedUpdate()
@@ -58,7 +59,12 @@ public class PoppingCanCola : MonoBehaviour
         nearestTarget = temp;
     }
 
-    public void Init(ItemData data)
+    private void MoveUpdate()
+    {
+        transform.position = GameManager.Instance.curPlayer.transform.position;
+    }
+
+    public void Init(ItemData data, float scanRange)
     {
         weaponData = data;
 
@@ -70,6 +76,8 @@ public class PoppingCanCola : MonoBehaviour
         damage = weaponData.levelData[curLevel].damage;
         weaponPer = weaponData.levelData[curLevel].itemCount;
         moveSpeed = weaponData.levelData[curLevel].weaponMoveSpeed;
+
+        this.scanRange = scanRange;
         
         poppingCanColaPrefab = weaponData.projectile;
 
@@ -90,7 +98,8 @@ public class PoppingCanCola : MonoBehaviour
     {
         if (fireTimer <= 0 && nearestTarget != null)
         {
-            GameObject canCola = PoolManager.Instance.GetGameObejct(poppingCanColaPrefab, transform.position, quaternion.identity);
+            GameObject canCola =
+                PoolManager.Instance.GetGameObejct(poppingCanColaPrefab, transform.position, quaternion.identity);
 
             canCola.transform.position = transform.position;
             
@@ -98,7 +107,8 @@ public class PoppingCanCola : MonoBehaviour
             
             canCola.SetActive(true);
 
-            canCola.GetComponent<PoppingCanColaWeapon>().InitPoppingCanCola(damage, weaponPer, dir.normalized, 10);
+            canCola.GetComponent<PoppingCanColaWeapon>()
+                .InitPoppingCanCola(damage, weaponPer, dir.normalized, moveSpeed);
 
             fireTimer = fireRate;
         }
