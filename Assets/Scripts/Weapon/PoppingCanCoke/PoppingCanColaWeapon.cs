@@ -12,9 +12,18 @@ public class PoppingCanColaWeapon : MonoBehaviour
 
     private Rigidbody2D rigid;
 
+    private WaitForSeconds waitForSeconds;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+
+        waitForSeconds = new WaitForSeconds(10f);
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(DestroyRoutine());
     }
 
     public void InitPoppingCanCola(float damage, int per, Vector3 dir, float moveSpeed)
@@ -55,5 +64,12 @@ public class PoppingCanColaWeapon : MonoBehaviour
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator DestroyRoutine()
+    {
+        yield return waitForSeconds;
+        
+        gameObject.SetActive(false);
     }
 }

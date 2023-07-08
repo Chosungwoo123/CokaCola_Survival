@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public abstract class ItemCard : MonoBehaviour
 {
+    [Space(10)]
+    [Header("기본 UI 변수")]
     [SerializeField] protected Image weaponIcon;
     [SerializeField] protected Text weaponName;
     [SerializeField] protected Text weaponDesc;

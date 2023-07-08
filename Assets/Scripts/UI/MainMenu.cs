@@ -6,9 +6,14 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public TransitionSettings transition;
-
-    public void LoadGameScene()
+    
+    public void LoadGameScene(string sceneName)
     {
-        TransitionManager.Instance().Transition("PistolStage1", transition, 0f);
+        TransitionManager.Instance().Transition(sceneName, transition, 0f);
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }

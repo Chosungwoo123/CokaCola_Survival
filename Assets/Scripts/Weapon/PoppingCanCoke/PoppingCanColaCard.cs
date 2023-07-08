@@ -6,6 +6,8 @@ using UnityEngine;
 public class PoppingCanColaCard : ItemCard
 {
     [SerializeField] private ItemData weaponData;
+
+    [SerializeField] private LayerMask targetLayer;
     
     private PoppingCanCola weaponObj;
     
@@ -20,7 +22,7 @@ public class PoppingCanColaCard : ItemCard
         {
             GameObject newWeapon = new GameObject();
             weaponObj = newWeapon.AddComponent<PoppingCanCola>();
-            weaponObj.Init(weaponData, 10f);
+            weaponObj.Init(weaponData, 10f, targetLayer);
 
             curLevel++;
 
@@ -63,5 +65,9 @@ public class PoppingCanColaCard : ItemCard
         weaponIcon.sprite = weaponData.itemIcon;
         weaponDesc.text = weaponData.levelData[curLevel].itemDesc;
         weaponName.text = weaponData.itemName;
+        
+        levelText.text = "NEW!!";
+
+        gameObject.SetActive(false);
     }
 }

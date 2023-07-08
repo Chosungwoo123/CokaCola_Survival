@@ -64,7 +64,7 @@ public class PoppingCanCola : MonoBehaviour
         transform.position = GameManager.Instance.curPlayer.transform.position;
     }
 
-    public void Init(ItemData data, float scanRange)
+    public void Init(ItemData data, float scanRange, LayerMask targetLayer)
     {
         weaponData = data;
 
@@ -76,6 +76,8 @@ public class PoppingCanCola : MonoBehaviour
         damage = weaponData.levelData[curLevel].damage;
         weaponPer = weaponData.levelData[curLevel].itemCount;
         moveSpeed = weaponData.levelData[curLevel].weaponMoveSpeed;
+
+        this.targetLayer = targetLayer;
 
         this.scanRange = scanRange;
         
