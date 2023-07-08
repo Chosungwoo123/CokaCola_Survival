@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text timerText;
     [SerializeField] private Text levelText;
     [SerializeField] private Slider hpBar;
+    [SerializeField] private GameObject stopMenuUI;
 
     [Space(10)]
     [Header("게임 관련 변수")]
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         TimerUpdate();
+        StopMenuUpdate();
     }
 
     private void TimerUpdate()
@@ -86,6 +88,28 @@ public class GameManager : MonoBehaviour
         secTime = Mathf.FloorToInt(gameTimer % 60);
 
         timerText.text = $"{minTime:D2}:{secTime:D2}";
+    }
+
+    private void StopMenuUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ShowStopMenu();
+        }
+    }
+
+    public void ShowStopMenu()
+    {
+        if (!isStop)
+        {
+            isStop = true;
+            stopMenuUI.SetActive(true);
+        }
+        else
+        {
+            isStop = false;
+            stopMenuUI.SetActive(false);
+        }
     }
 
     private void LevelUpdate()
