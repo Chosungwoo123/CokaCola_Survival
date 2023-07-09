@@ -28,6 +28,11 @@ public class PoppingCanCola : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.isStop)
+        {
+            return;
+        }
+        
         FireCanCola();
         MoveUpdate();
     }
