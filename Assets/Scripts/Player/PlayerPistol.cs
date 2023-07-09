@@ -175,7 +175,8 @@ public class PlayerPistol : MonoBehaviour
 
         if (curHealth <= 0)
         {
-            // 죽는 로직
+            // 게임 오버 로직
+            GameManager.Instance.ShowGameOverWindow();
         }
     }
 

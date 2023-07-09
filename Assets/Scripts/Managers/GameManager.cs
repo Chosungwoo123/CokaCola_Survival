@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text levelText;
     [SerializeField] private Slider hpBar;
     [SerializeField] private GameObject stopMenuUI;
+    [SerializeField] private GameObject gameOverWindow;
+    [SerializeField] private TextMeshProUGUI gameOverKillCountText;
+    [SerializeField] private TextMeshProUGUI gameOverLifeTimeText;
 
     [Space(10)]
     [Header("게임 관련 변수")]
@@ -92,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     private void StopMenuUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isStop)
         {
             ShowStopMenu();
         }
@@ -157,5 +161,13 @@ public class GameManager : MonoBehaviour
     public void SetHpBar(float amount)
     {
         hpBar.value = amount;
+    }
+
+    public void ShowGameOverWindow()
+    {
+        isStop = true;
+        gameOverKillCountText.text = $"죽인적 : {enemyDieCount}";
+        gameOverLifeTimeText.text = $"생존 시간 : {minTime:D2} : {secTime:D2}";
+        gameOverWindow.SetActive(true);
     }
 }
