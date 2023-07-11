@@ -31,13 +31,8 @@ public class PoppingCanColaWeapon : MonoBehaviour
         this.damage = damage;
         this.per = per;
         this.moveSpeed = moveSpeed;
-
-        Debug.Log(dir);
-        Debug.Log(dir * moveSpeed);
         
         rigid.velocity = dir * 15;
-        
-        Debug.Log(rigid.velocity);
         
         transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
     }

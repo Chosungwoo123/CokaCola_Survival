@@ -38,10 +38,10 @@ public class LevelUpManager : MonoBehaviour
     private void Update()
     {
         // Test
-        if(Input.GetKeyDown(KeyCode.K))
+        /*if(Input.GetKeyDown(KeyCode.K))
         {
             ShowLevelUpUI();
-        }
+        }*/
     }
 
     public void ShowLevelUpUI()
