@@ -95,14 +95,15 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Area"))
+        if (!collision.CompareTag("EnemyArea") || collision.CompareTag("Area"))
         {
             return;
         }
 
-        Vector3 playerDir = new Vector3(GameManager.Instance.playerInputX, GameManager.Instance.playerInputY);
-        
-        transform.Translate(playerDir * 35 + new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0f));
+        Vector3 playerPos = GameManager.Instance.curPlayer.transform.position;
+        Vector3 playerDir = transform.position - playerPos;
+
+        transform.position = new Vector3(playerPos.x - playerDir.x, playerPos.y - playerDir.y, 0);
     }
 
     private void MoveUpdate()

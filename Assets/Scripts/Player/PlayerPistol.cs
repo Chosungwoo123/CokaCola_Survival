@@ -89,14 +89,15 @@ public class PlayerPistol : MonoBehaviour
 
         if (x != 0)
         {
-            GameManager.Instance.playerInputX = x;
+            
         }
         
         if (y != 0)
         {
-            GameManager.Instance.playerInputY = y;
         }
         
+        GameManager.Instance.playerInputX = x;
+        GameManager.Instance.playerInputY = y;
 
         if (x != 0 || y != 0)
         {
@@ -107,7 +108,7 @@ public class PlayerPistol : MonoBehaviour
             isRun = false;
         }
 
-        Vector3 movePos = new Vector2(x, y) * moveSpeed * Time.deltaTime;
+        Vector3 movePos = new Vector2(x, y) * (moveSpeed * Time.deltaTime);
 
         transform.position += movePos;
     }
