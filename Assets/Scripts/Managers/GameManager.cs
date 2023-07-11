@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         dieCountText.text = enemyDieCount.ToString();
+        playerLevel = 11;
     }
 
     private void Update()
@@ -137,7 +138,7 @@ public class GameManager : MonoBehaviour
     {
         curExp++;
 
-        if(curExp >= nextExp[Mathf.Min(playerLevel, nextExp.Length)])
+        if(curExp >= nextExp[Mathf.Min(playerLevel, nextExp.Length - 1)])
         {
             playerLevel++;
             curExp = 0;

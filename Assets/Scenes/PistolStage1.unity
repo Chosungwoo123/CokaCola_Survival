@@ -34218,7 +34218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448375797}
   - component: {fileID: 1448375798}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EnemyArea
   m_TagString: EnemyArea
   m_Icon: {fileID: 0}
