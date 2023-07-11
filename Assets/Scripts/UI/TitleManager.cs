@@ -24,7 +24,7 @@ public class TitleManager : MonoBehaviour
             item.anchoredPosition = new Vector3(600, item.anchoredPosition.y, 0);
         }
 
-        titleRect.DOScale(6f, 1.5f).SetDelay(1f).SetEase(Ease.OutElastic);
+        titleRect.DOScale(8f, 1.5f).SetDelay(1f).SetEase(Ease.OutElastic);
 
         yield return new WaitForSeconds(2f);
 
@@ -32,7 +32,7 @@ public class TitleManager : MonoBehaviour
         
         for (int i = buttonRects.Length - 1; i >= 0; i--)
         {
-            buttonRects[i].DOAnchorPosX(-84, 0.7f).SetDelay(index * 0.1f).SetEase(Ease.OutBack);
+            buttonRects[i].DOAnchorPosX(-140, 0.7f).SetDelay(index * 0.1f).SetEase(Ease.OutBack);
             index++;
         }
 
