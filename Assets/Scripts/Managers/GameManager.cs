@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         dieCountText.text = enemyDieCount.ToString();
-        playerLevel = 11;
     }
 
     private void Update()
