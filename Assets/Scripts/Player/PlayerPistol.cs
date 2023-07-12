@@ -5,28 +5,26 @@ using UnityEngine;
 
 public class PlayerPistol : MonoBehaviour
 {
-    [Space(10)]
-    [Header("기본 스탯 관련 변수")]
-    [SerializeField] private float maxHealth;
+    [Space(10)] [Header("기본 스탯 관련 변수")] [SerializeField]
+    private float maxHealth;
     [SerializeField] private float moveSpeed;
 
-    [Space(10)]
-    [Header("게임 오브젝트")]
-    [SerializeField] private GameObject bulletPrefab;
+    [Space(10)] [Header("게임 오브젝트")] [SerializeField]
+    private GameObject bulletPrefab;
     [SerializeField] private GameObject shotPos;
     [SerializeField] private GameObject magnetObj;
 
-    [Space(10)]
-    [Header("공격 관련")]
-    [SerializeField] private float fireRate;
+    [Space(10)] [Header("공격 관련")] [SerializeField]
+    private float fireRate;
 
-    [Space(10)]
-    [Header("이펙트 관련")]
+    [Space(10)] [Header("이펙트 관련")]
     [SerializeField] private GameObject fireEffect;
     [SerializeField] private ParticleSystem hitEffect;
 
-    private int bulletCount;
+    [Space(10)] [Header("사운드 관련")] 
+    [SerializeField] private AudioClip shotSound;
     
+    private int bulletCount;
     private bool isRun;
     private bool animStop = false;
 
