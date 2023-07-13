@@ -25,7 +25,7 @@ public class Reposition : MonoBehaviour
 
         float dirX = GameManager.Instance.playerInputX < 0 ? -1 : 1;
         float dirY = GameManager.Instance.playerInputY < 0 ? -1 : 1;
-
+        
         switch (transform.tag)
         {
             case "Ground":
