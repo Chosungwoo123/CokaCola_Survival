@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOverWindow()
     {
         isStop = true;
-        gameOverKillCountText.text = $"죽인적 : {enemyDieCount}";
+        gameOverKillCountText.text = $"스코어 : {enemyDieCount}";
         gameOverLifeTimeText.text = $"생존 시간 : {minTime:D2} : {secTime:D2}";
         gameOverWindow.SetActive(true);
     }
