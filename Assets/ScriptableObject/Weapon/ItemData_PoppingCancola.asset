@@ -47,5 +47,5 @@ MonoBehaviour:
     itemCount: 6
     weaponMoveSpeed: 15
   projectile: {fileID: 3669481304136349493, guid: d77d86efe11aeda4b920cf702ab84e3c, type: 3}
-  itemIcon: {fileID: 21300000, guid: 99766e24df4bb624b8a1bcbcd20455cb, type: 3}
+  itemIcon: {fileID: 21300000, guid: 87579f6d65c615f4c8145080df2cb08f, type: 3}
   itemName: "\uD31D\uD551 \uCF5C\uB77C"
