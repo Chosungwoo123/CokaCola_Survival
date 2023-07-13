@@ -11,27 +11,27 @@ public abstract class EnemyBase : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float attackDamage;
 
-    private float curHealth;
+    protected float curHealth;
     
     private bool animStop = false;
-    private bool isLive = true;
+    protected bool isLive = true;
 
     private Transform targetPlayer;
 
-    [SerializeField] private GameObject expPrefab;
+    [SerializeField] protected GameObject expPrefab;
 
-    Material material;
-    Animator anim;
-    Rigidbody2D rigid;
-    SpriteRenderer sr;
-    private static readonly int HitAnimation = Animator.StringToHash("Hit");
+    protected Material material;
+    protected Animator anim;
+    protected Rigidbody2D rigid;
+    
+    protected static readonly int HitAnimation = Animator.StringToHash("Hit");
+    protected static readonly int DissolveAmount = Shader.PropertyToID("_DissolveAmount");
 
     protected virtual void Start()
     {
         material = GetComponent<SpriteRenderer>().material;
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         
         targetPlayer = GameManager.Instance.curPlayer.transform;
     }
@@ -40,7 +40,7 @@ public abstract class EnemyBase : MonoBehaviour
     {
         if (material != null)
         {
-            material.SetFloat("_DissolveAmount", 0);
+            material.SetFloat(DissolveAmount, 0);
         }
 
         curHealth = maxHealth;
@@ -114,40 +114,16 @@ public abstract class EnemyBase : MonoBehaviour
         transform.position += nextPos;
     }
 
-    public void OnDamage(float damage)
-    {
-        if (!isLive)
-        {
-            return;
-        }
+    public abstract void OnDamage(float damage);
 
-        curHealth -= damage;
-
-        if(curHealth > 0)
-        {
-            StartCoroutine(KnockBack());
-            anim.SetTrigger(HitAnimation);
-        }
-        else
-        {
-            // 죽는 로직
-            PoolManager.Instance.GetGameObejct(expPrefab, transform.position, Quaternion.identity).SetActive(true);
-            StartCoroutine(DissolveStart());
-            GameManager.Instance.DieCountUp();
-            rigid.velocity = Vector2.zero;
-            anim.StartPlayback();
-            isLive = false;
-        }
-    }
-
-    private IEnumerator KnockBack()
+    protected IEnumerator KnockBack()
     {
         yield return null;
         Vector3 dirVec = transform.position - GameManager.Instance.curPlayer.transform.position;
         rigid.AddForce(dirVec.normalized * 2.5f, ForceMode2D.Impulse);
     }
 
-    private IEnumerator DissolveStart()
+    protected IEnumerator DissolveStart()
     {
         float count = 0;
 
