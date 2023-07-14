@@ -8,6 +8,7 @@ public class LevelUpManager : MonoBehaviour
 
     public GameObject levelUpBG;
     public LevelUpItemHandler levelUpHandler;
+    public AudioClip levelUpSound;
 
     private bool isOpenLevelUI = false;
 
@@ -35,24 +36,15 @@ public class LevelUpManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // Test
-        /*if(Input.GetKeyDown(KeyCode.K))
-        {
-            ShowLevelUpUI();
-        }*/
-    }
-
     public void ShowLevelUpUI()
     {
         if (isOpenLevelUI)
         {
             return;
         }
-
         isOpenLevelUI = true;
         GameManager.Instance.TimeStop();
+        SoundManager.Instance.PlaySound(levelUpSound, 1);
         levelUpBG.SetActive(true);
         levelUpHandler.LevelItemRoutine();
     }

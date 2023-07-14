@@ -24350,6 +24350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelUpBG: {fileID: 1340013532}
   levelUpHandler: {fileID: 137827810}
+  levelUpSound: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
 --- !u!1 &1239814871
 GameObject:
   m_ObjectHideFlags: 0
