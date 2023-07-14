@@ -129,6 +129,8 @@ public class PlayerPistol : MonoBehaviour
             
             bullet.GetComponent<PlayerBullet>().InitPlayerBullet(bulletDamage, bulletCount, bulletSize);
 
+            //SoundManager.Instance.PlaySound(shotSound);
+            
             fireEffect.SetActive(true);
             bullet.SetActive(true);
 
