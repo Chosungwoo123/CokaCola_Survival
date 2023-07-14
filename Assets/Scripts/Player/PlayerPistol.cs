@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerPistol : MonoBehaviour
 {
@@ -129,7 +130,7 @@ public class PlayerPistol : MonoBehaviour
             
             bullet.GetComponent<PlayerBullet>().InitPlayerBullet(bulletDamage, bulletCount, bulletSize);
 
-            //SoundManager.Instance.PlaySound(shotSound);
+            SoundManager.Instance.PlaySound(shotSound, Random.Range(0.65f, 1.2f));
             
             fireEffect.SetActive(true);
             bullet.SetActive(true);

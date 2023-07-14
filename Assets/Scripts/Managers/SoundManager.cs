@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SoundManager : MonoBehaviour
 {
     private static SoundManager instance = null;
 
-    [SerializeField] private AudioSource musicSource, effectSource;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private GameObject soundEffectObj;
+
+    private float sfxVolume = 1f;
 
     public static SoundManager Instance
     {
@@ -35,14 +39,35 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip)
-    { 
-        effectSource.PlayOneShot(clip);
+    private void Start()
+    {
+        musicSource.loop = true;
+    }
+
+    public void PlaySound(AudioClip clip, float pitch)
+    {
+        GameObject soundObj = PoolManager.Instance.GetGameObejct(soundEffectObj, transform.position, Quaternion.identity);
+
+        soundObj.GetComponent<AudioSource>().pitch = pitch;
+        soundObj.GetComponent<AudioSource>().volume = sfxVolume;
+
+        soundObj.SetActive(true);
+        
+        soundObj.GetComponent<AudioSource>().PlayOneShot(clip);
+
+        StartCoroutine(StopSound(soundObj, clip.length));
+    }
+    
+    IEnumerator StopSound(GameObject soundObj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        soundObj.SetActive(false);
     }
 
     public void PlayMusic(AudioClip clip)
     {
-        musicSource.PlayOneShot(clip);
+        musicSource.clip = clip;
+        musicSource.Play();
     }
     
     public void SetMusicVolume(float value)
@@ -52,6 +77,6 @@ public class SoundManager : MonoBehaviour
     
     public void SetEffectVolume(float value)
     {
-        effectSource.volume = value;
+        sfxVolume = value;
     }
 }

@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour
     [Header("게임 관련 변수")]
     public int[] nextExp;
 
+    [Space(10)] [Header("오디오 관련")] 
+    [SerializeField] private AudioClip bgm;
+    
     [HideInInspector] public int enemyDieCount;
     [HideInInspector] public int curExp = 0;
     [HideInInspector] public int playerLevel = 0;
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.Instance.PlayMusic(bgm);
+        
         dieCountText.text = enemyDieCount.ToString();
     }
 
