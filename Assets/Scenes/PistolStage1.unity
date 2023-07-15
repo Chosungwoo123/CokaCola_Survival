@@ -560,7 +560,7 @@ MonoBehaviour:
     attackDamage: 30
   - spawnTime: 0.3
     health: 95
-    speed: 90
+    speed: 3.3
     attackDamage: 30
   - spawnTime: 0.2
     health: 90
@@ -1300,6 +1300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1884103583}
   soundEffectObj: {fileID: 5613168780204667843, guid: 60a2459eec7b3854b92db3c14e39397e, type: 3}
+  sfxVolume: 1
+  bgmVolume: 1
 --- !u!4 &149937486
 Transform:
   m_ObjectHideFlags: 0
