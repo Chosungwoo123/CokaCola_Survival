@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class TitleManager : MonoBehaviour
 
     [SerializeField] private RectTransform[] buttonRects;
 
+    [SerializeField] private AudioClip bgm;
+
     private void Start()
     {
+        SoundManager.Instance.PlayMusic(bgm);
         StartCoroutine(StartRoutine());
     }
 
@@ -37,5 +41,10 @@ public class TitleManager : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    public void PlayUISound(AudioClip sound)
+    {
+        SoundManager.Instance.PlaySound(sound, 1f);
     }
 }

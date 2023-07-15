@@ -11,7 +11,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private GameObject soundEffectObj;
 
-    private float sfxVolume = 1f;
+    public float sfxVolume = 1f;
+    public float bgmVolume = 1f;
 
     public static SoundManager Instance
     {
@@ -67,11 +68,14 @@ public class SoundManager : MonoBehaviour
     public void PlayMusic(AudioClip clip)
     {
         musicSource.clip = clip;
+        musicSource.volume = bgmVolume;
         musicSource.Play();
     }
     
     public void SetMusicVolume(float value)
     {
+        bgmVolume = value;
+        
         musicSource.volume = value;
     }
     

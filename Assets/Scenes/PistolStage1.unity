@@ -558,12 +558,12 @@ MonoBehaviour:
     health: 90
     speed: 3.3
     attackDamage: 30
-  - spawnTime: 0.2
+  - spawnTime: 0.3
     health: 95
-    speed: 3.3
+    speed: 90
     attackDamage: 30
-  - spawnTime: 0.1
-    health: 100
+  - spawnTime: 0.2
+    health: 90
     speed: 3.3
     attackDamage: 30
   spawnPoints:
@@ -1518,7 +1518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192927965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.97, y: 2.98, z: -10}
+  m_LocalPosition: {x: -2.9, y: 1.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12278,7 +12278,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.9616549, g: 1, b: 0.75, a: 0}
+  m_BackGroundColor: {r: 0.5372549, g: 0.8117648, b: 0.20784315, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -12319,7 +12319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.97, y: 2.98, z: -10}
+  m_LocalPosition: {x: -2.9, y: 1.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14157,7 +14157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857429216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.97, y: 2.98, z: 0}
+  m_LocalPosition: {x: -2.9, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
