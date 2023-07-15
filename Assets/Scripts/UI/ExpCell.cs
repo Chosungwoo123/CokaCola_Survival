@@ -9,6 +9,8 @@ public class ExpCell : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
 
+    [SerializeField] private AudioClip sound;
+
     private bool isTargetting = false;
 
     private void OnEnable()
@@ -50,6 +52,7 @@ public class ExpCell : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.GetExp();
+            SoundManager.Instance.PlaySound(sound, 1f);
             gameObject.SetActive(false);
         }
     }

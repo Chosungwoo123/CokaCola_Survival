@@ -24,6 +24,7 @@ public class PlayerPistol : MonoBehaviour
 
     [Space(10)] [Header("사운드 관련")] 
     [SerializeField] private AudioClip shotSound;
+    [SerializeField] private AudioClip damageSound;
     
     private int bulletCount;
     private bool isRun;
@@ -174,6 +175,8 @@ public class PlayerPistol : MonoBehaviour
         GameManager.Instance.CameraShake(2, 0.1f);
         
         hitEffect.Emit(1);
+        
+        SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
 
         if (curHealth <= 0)
         {

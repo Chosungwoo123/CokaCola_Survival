@@ -136,9 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779669c746148334099cd00946302524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3.1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
   easeType: 26
   moveSpeed: 14
+  sound: {fileID: 8300000, guid: bbf6a840936713146b4e6693fb76a6f1, type: 3}

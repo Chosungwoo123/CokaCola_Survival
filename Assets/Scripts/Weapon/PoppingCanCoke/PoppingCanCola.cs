@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PoppingCanCola : MonoBehaviour
 {
@@ -12,7 +10,8 @@ public class PoppingCanCola : MonoBehaviour
 
     private int curLevel;
     private int weaponPer;
-    
+    private int weaponCount;
+
     private float fireRate;
     private float damage;
     private float moveSpeed;
@@ -81,6 +80,7 @@ public class PoppingCanCola : MonoBehaviour
         damage = weaponData.levelData[curLevel].damage;
         weaponPer = weaponData.levelData[curLevel].itemCount;
         moveSpeed = weaponData.levelData[curLevel].weaponMoveSpeed;
+        weaponCount = (int)weaponData.levelData[curLevel].weaponSize.x;     // 콜라를 한번에 발사하는 수
 
         this.targetLayer = targetLayer;
 
@@ -99,6 +99,7 @@ public class PoppingCanCola : MonoBehaviour
         damage = weaponData.levelData[curLevel].damage;
         weaponPer = weaponData.levelData[curLevel].itemCount;
         moveSpeed = weaponData.levelData[curLevel].weaponMoveSpeed;
+        weaponCount = (int)weaponData.levelData[curLevel].weaponSize.x;
     }
 
     private void FireCanCola()
@@ -108,8 +109,6 @@ public class PoppingCanCola : MonoBehaviour
             GameObject canCola =
                 PoolManager.Instance.GetGameObejct(poppingCanColaPrefab, transform.position, quaternion.identity);
 
-            canCola.transform.position = transform.position;
-            
             Vector3 dir = nearestTarget.position - transform.position;
             
             canCola.SetActive(true);
@@ -117,6 +116,17 @@ public class PoppingCanCola : MonoBehaviour
             canCola.GetComponent<PoppingCanColaWeapon>()
                 .InitPoppingCanCola(damage, weaponPer, dir.normalized, moveSpeed);
 
+            for (int i = 1; i < weaponCount; i++)
+            {
+                canCola = PoolManager.Instance.GetGameObejct(poppingCanColaPrefab, transform.position,
+                    Quaternion.identity);
+
+                canCola.SetActive(true);
+
+                canCola.GetComponent<PoppingCanColaWeapon>().InitPoppingCanCola(damage, weaponPer,
+                    Random.insideUnitCircle.normalized, moveSpeed);
+            }
+            
             fireTimer = fireRate;
         }
 

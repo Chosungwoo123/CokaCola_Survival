@@ -3939,7 +3939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 772149111}
-  effectSource: {fileID: 1409824954}
+  soundEffectObj: {fileID: 5613168780204667843, guid: 60a2459eec7b3854b92db3c14e39397e, type: 3}
 --- !u!1 &1972267496
 GameObject:
   m_ObjectHideFlags: 0
