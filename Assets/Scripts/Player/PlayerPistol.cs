@@ -10,8 +10,8 @@ public class PlayerPistol : MonoBehaviour
     private float maxHealth;
     [SerializeField] private float moveSpeed;
 
-    [Space(10)] [Header("게임 오브젝트")] [SerializeField]
-    private GameObject bulletPrefab;
+    [Space(10)] [Header("게임 오브젝트")] 
+    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject shotPos;
     [SerializeField] private GameObject magnetObj;
 
@@ -176,7 +176,7 @@ public class PlayerPistol : MonoBehaviour
         
         hitEffect.Emit(1);
         
-        SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
+        //SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
 
         if (curHealth <= 0)
         {
@@ -190,5 +190,10 @@ public class PlayerPistol : MonoBehaviour
         curHealth = Mathf.Min(curHealth + hp, maxHealth);
 
         GameManager.Instance.SetHpBar(curHealth / maxHealth);
+    }
+
+    public void LevelUpMagnet(float size)
+    {
+        magnetObj.transform.localScale = new Vector3(size, size, 1);
     }
 }
