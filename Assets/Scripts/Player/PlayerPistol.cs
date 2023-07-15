@@ -176,7 +176,7 @@ public class PlayerPistol : MonoBehaviour
         
         hitEffect.Emit(1);
         
-        //SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
+        SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
 
         if (curHealth <= 0)
         {

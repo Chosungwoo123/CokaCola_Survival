@@ -1354,7 +1354,7 @@ MonoBehaviour:
     prefab: {fileID: 6709771633611217211, guid: a7201fe8a5e848b4f8d28160f48bc6d3, type: 3}
   - poolSize: 10
     prefab: {fileID: 3669481304136349493, guid: d77d86efe11aeda4b920cf702ab84e3c, type: 3}
-  - poolSize: 200
+  - poolSize: 500
     prefab: {fileID: 5613168780204667843, guid: 60a2459eec7b3854b92db3c14e39397e, type: 3}
 --- !u!4 &152916594
 Transform:
@@ -13865,7 +13865,7 @@ MonoBehaviour:
   fireEffect: {fileID: 8844651163322151394}
   hitEffect: {fileID: 2079577953}
   shotSound: {fileID: 8300000, guid: 65201ddabb4144f6a8fb9480120b7656, type: 3}
-  damageSound: {fileID: 8300000, guid: 581cc79364229a84ba68de3f1ecd8843, type: 3}
+  damageSound: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
 --- !u!1 &881254289
 GameObject:
   m_ObjectHideFlags: 0
