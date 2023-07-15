@@ -32,7 +32,10 @@ public class PlayerPistol : MonoBehaviour
 
     private float fireTimer;
     private float curHealth;
+    private float curMoveSpeed;
     private float bulletDamage;
+    private float hitSoundLength;
+    private float hitSoundTimer;
     
     private Vector3 bulletSize;
     
@@ -45,6 +48,11 @@ public class PlayerPistol : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
+
+        hitSoundLength = 0.3f;
+        hitSoundTimer = hitSoundLength;
+
+        curMoveSpeed = moveSpeed;
 
         curHealth = maxHealth;
     }
@@ -80,6 +88,7 @@ public class PlayerPistol : MonoBehaviour
         AnimationUpdate();
         ShotUpdate();
         FlipUpdate();
+        HitSoundUpdate();
     }
 
     private void MoveUpdate()
@@ -108,7 +117,7 @@ public class PlayerPistol : MonoBehaviour
             isRun = false;
         }
 
-        Vector3 movePos = new Vector2(x, y) * (moveSpeed * Time.deltaTime);
+        Vector3 movePos = new Vector2(x, y) * (curMoveSpeed * Time.deltaTime);
 
         transform.position += movePos;
     }
@@ -158,6 +167,11 @@ public class PlayerPistol : MonoBehaviour
         }
     }
 
+    private void HitSoundUpdate()
+    {
+        hitSoundTimer -= Time.deltaTime;
+    }
+
     public void BulletLevelUp(int bulletCount, float bulletDamage, Vector3 bulletSize, float fireRate)
     {
         this.bulletCount = bulletCount;
@@ -175,8 +189,11 @@ public class PlayerPistol : MonoBehaviour
         GameManager.Instance.CameraShake(2, 0.1f);
         
         hitEffect.Emit(1);
-        
-        SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
+
+        if (hitSoundTimer <= 0)
+        {
+            SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
+        }
 
         if (curHealth <= 0)
         {
@@ -195,5 +212,10 @@ public class PlayerPistol : MonoBehaviour
     public void LevelUpMagnet(float size)
     {
         magnetObj.transform.localScale = new Vector3(size, size, 1);
+    }
+
+    public void UpgradeSpeed(float rate)
+    {
+        curMoveSpeed = curMoveSpeed + (moveSpeed / rate);
     }
 }

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bac6b1a4f46784387a41567d74c8c3, type: 3}
+  m_Name: ItemData_Shoe
+  m_EditorClassIdentifier: 
+  levelData:
+  - damage: 10
+    fireRate: 0
+    weaponSize: {x: 0, y: 0, z: 0}
+    itemDesc: "\uC774\uB3D9\uC18D\uB3C4 10%\uC99D\uAC00."
+    itemCount: 0
+    weaponMoveSpeed: 0
+  - damage: 20
+    fireRate: 0
+    weaponSize: {x: 0, y: 0, z: 0}
+    itemDesc: "\uC774\uB3D9\uC18D\uB3C4 20%\uC99D\uAC00."
+    itemCount: 0
+    weaponMoveSpeed: 0
+  - damage: 40
+    fireRate: 0
+    weaponSize: {x: 0, y: 0, z: 0}
+    itemDesc: "\uC774\uB3D9\uC18D\uB3C4 40%\uC99D\uAC00."
+    itemCount: 0
+    weaponMoveSpeed: 0
+  - damage: 60
+    fireRate: 0
+    weaponSize: {x: 0, y: 0, z: 0}
+    itemDesc: "\uC774\uB3D9\uC18D\uB3C4 60%\uC99D\uAC00."
+    itemCount: 0
+    weaponMoveSpeed: 0
+  - damage: 70
+    fireRate: 0
+    weaponSize: {x: 0, y: 0, z: 0}
+    itemDesc: "\uC774\uB3D9\uC18D\uB3C4 70%\uC99D\uAC00."
+    itemCount: 0
+    weaponMoveSpeed: 0
+  projectile: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 177f0e0a4941a464f935c21b367d57c7, type: 3}
+  itemName: "\uC2E0\uBC1C"
