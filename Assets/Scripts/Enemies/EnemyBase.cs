@@ -109,7 +109,7 @@ public abstract class EnemyBase : MonoBehaviour
     private void MoveUpdate()
     {
         rigid.velocity = Vector2.zero;
-        Vector3 dir = GameManager.Instance.curPlayer.transform.position - transform.position;
+        Vector3 dir = GameManager.Instance.enemyTarget.transform.position - transform.position;
         Vector3 nextPos = dir.normalized * moveSpeed * Time.deltaTime;
         transform.position += nextPos;
     }
@@ -139,7 +139,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     private void FilpUpdate()
     {
-        Vector2 dir = GameManager.Instance.curPlayer.transform.position - transform.position;
+        Vector2 dir = GameManager.Instance.enemyTarget.transform.position - transform.position;
 
         if (dir.x > 0f)
         {

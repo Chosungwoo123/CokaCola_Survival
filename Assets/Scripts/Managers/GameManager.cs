@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     [Header("플레이어 관련 오브젝트")]
     public GameObject curPlayer;
+    public GameObject enemyTarget;
 
     [Space(10)]
     [Header("카메라 관련 오브젝트")]
