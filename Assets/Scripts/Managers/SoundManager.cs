@@ -58,6 +58,20 @@ public class SoundManager : MonoBehaviour
 
         StartCoroutine(StopSound(soundObj, clip.length));
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        GameObject soundObj = PoolManager.Instance.GetGameObejct(soundEffectObj, transform.position, Quaternion.identity);
+
+        soundObj.GetComponent<AudioSource>().pitch = 1f;
+        soundObj.GetComponent<AudioSource>().volume = sfxVolume;
+
+        soundObj.SetActive(true);
+        
+        soundObj.GetComponent<AudioSource>().PlayOneShot(clip);
+
+        StartCoroutine(StopSound(soundObj, clip.length));
+    }
     
     IEnumerator StopSound(GameObject soundObj, float delay)
     {
