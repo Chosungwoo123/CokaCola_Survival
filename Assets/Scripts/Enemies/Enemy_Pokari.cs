@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy_Pokari : EnemyBase
 {
-    [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip dieSound;
     
     public override void OnDamage(float damage)
@@ -19,7 +18,6 @@ public class Enemy_Pokari : EnemyBase
         if(curHealth > 0)
         {
             StartCoroutine(KnockBack());
-            SoundManager.Instance.PlaySound(hitSound, 1f);
             anim.SetTrigger(HitAnimation);
         }
         else
