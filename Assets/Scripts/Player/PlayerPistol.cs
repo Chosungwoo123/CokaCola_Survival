@@ -189,12 +189,9 @@ public class PlayerPistol : MonoBehaviour
         GameManager.Instance.CameraShake(2, 0.1f);
         
         hitEffect.Emit(1);
-
-        if (hitSoundTimer <= 0)
-        {
-            SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
-        }
-
+        
+        SoundManager.Instance.PlaySound(damageSound, Random.Range(0.7f, 1.1f));
+        
         if (curHealth <= 0)
         {
             // 게임 오버 로직

@@ -170,5 +170,10 @@ public abstract class EnemyBase : MonoBehaviour
         {
             other.transform.GetComponent<PlayerPistol>().OnDamage(Time.deltaTime * attackDamage);
         }
+
+        if (other.transform.CompareTag("Tower"))
+        {
+            other.transform.GetComponent<Tower>().OnDamage(Time.deltaTime * attackDamage);
+        }
     }
 }

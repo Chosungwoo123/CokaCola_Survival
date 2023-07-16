@@ -9,7 +9,7 @@ public class EnemyIndicator : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
-    private Renderer renderer;
+    private new Renderer renderer;
 
     private void Start()
     {
