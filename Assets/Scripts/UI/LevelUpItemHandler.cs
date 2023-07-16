@@ -10,6 +10,8 @@ public class LevelUpItemHandler : MonoBehaviour
     [SerializeField] private RectTransform[] levelUpObject;
     [SerializeField] private RectTransform[] infiniteItem;
 
+    [SerializeField] private AudioClip selectItemSound;
+
     private List<RectTransform> Rects;
 
     private void Start()
@@ -72,6 +74,8 @@ public class LevelUpItemHandler : MonoBehaviour
 
     public void DontClickItemButton()
     {
+        SoundManager.Instance.PlaySound(selectItemSound, 1f);
+        
         for (int i = 0; i < Rects.Count; i++)
         {
             Rects[i].gameObject.GetComponent<Button>().interactable = false;
