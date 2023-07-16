@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     [Header("카메라 관련 오브젝트")]
     [SerializeField] private CameraShake cameraShake;
 
+    #region UI 관련 오브젝트
+
     [Space(10)]
     [Header("UI 관련 오브젝트")]
     [SerializeField] private Text dieCountText;
@@ -38,6 +40,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverWindow;
     [SerializeField] private TextMeshProUGUI gameOverKillCountText;
     [SerializeField] private TextMeshProUGUI gameOverLifeTimeText;
+    [SerializeField] private GameObject stageClearObj;
+    [SerializeField] private TextMeshProUGUI stageClearScoreText;
+    
+    #endregion
 
     [Space(10)]
     [Header("게임 관련 변수")]
@@ -45,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     [Space(10)] [Header("오디오 관련")] 
     [SerializeField] private AudioClip bgm;
+    [SerializeField] private AudioClip stageClearSound;
     
     [HideInInspector] public int enemyDieCount;
     [HideInInspector] public int curExp = 0;
@@ -95,6 +102,11 @@ public class GameManager : MonoBehaviour
 
         minTime = Mathf.FloorToInt(gameTimer / 60);
         secTime = Mathf.FloorToInt(gameTimer % 60);
+
+        if (minTime == 5)
+        {
+            StageClear();
+        }
 
         timerText.text = $"{minTime:D2}:{secTime:D2}";
     }
@@ -174,5 +186,13 @@ public class GameManager : MonoBehaviour
         gameOverKillCountText.text = $"스코어 : {enemyDieCount}";
         gameOverLifeTimeText.text = $"생존 시간 : {minTime:D2} : {secTime:D2}";
         gameOverWindow.SetActive(true);
+    }
+
+    public void StageClear()
+    {
+        isStop = true;
+        SoundManager.Instance.PlaySound(stageClearSound,1f);
+        stageClearScoreText.text = $"스코어 : {enemyDieCount}";
+        stageClearObj.SetActive(true);
     }
 }
