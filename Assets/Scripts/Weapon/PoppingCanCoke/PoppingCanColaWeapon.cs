@@ -14,9 +14,12 @@ public class PoppingCanColaWeapon : MonoBehaviour
 
     private WaitForSeconds waitForSeconds;
 
+    private TrailRenderer trail;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        trail = GetComponent<TrailRenderer>();
 
         waitForSeconds = new WaitForSeconds(10f);
     }
@@ -71,5 +74,6 @@ public class PoppingCanColaWeapon : MonoBehaviour
         yield return waitForSeconds;
         
         gameObject.SetActive(false);
+        trail.Clear();
     }
 }
