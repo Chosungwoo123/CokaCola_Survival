@@ -40,5 +40,5 @@ MonoBehaviour:
     bulletSize: {x: 1.4, y: 1.4, z: 1.4}
     weaponDesc: "\uAD00\uD1B5\uB825 \uC99D\uAC00. \uD06C\uAE30 \uC99D\uAC00. \uC5F0\uC0AC\uC18D\uB3C4
       \uC99D\uAC00."
-  weaponIcon: {fileID: 21300000, guid: 8d230f11022e2364b8f37ddf0e082882, type: 3}
+  weaponIcon: {fileID: 21300000, guid: 78c8d4d62595af1479e44d248fcd8926, type: 3}
   weaponName: "\uD53C\uC2A4\uD1A8"
