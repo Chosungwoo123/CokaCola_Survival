@@ -40,4 +40,11 @@ public class Tower : MonoBehaviour
             GameManager.Instance.ShowGameOverWindow();
         }
     }
+    
+    public void HealHP(float rate)
+    {
+        curHealth = Mathf.Min(curHealth + (curHealth * (rate / 100)), maxHealth);
+
+        hpImage.fillAmount = curHealth / maxHealth;
+    }
 }

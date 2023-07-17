@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4bac6b1a4f46784387a41567d74c8c3, type: 3}
-  m_Name: ItemData_HealPack
+  m_Name: ItemData_TowerHealPack
   m_EditorClassIdentifier: 
   levelData:
   - damage: 30
     fireRate: 0
     weaponSize: {x: 0, y: 0, z: 0}
-    itemDesc: "\uCCB4\uB825\uC744 30% \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    itemDesc: "\uCF5C\uB77C\uD0C0\uC6CC\uC758 \uCCB4\uB825\uC744 30% \uD68C\uBCF5\uD569\uB2C8\uB2E4."
     itemCount: 0
     weaponMoveSpeed: 0
   projectile: {fileID: 0}
-  itemIcon: {fileID: 21300000, guid: 8c3e1244cd206404c9664170a47a94fd, type: 3}
-  itemName: "\uD790\uD329"
+  itemIcon: {fileID: 21300000, guid: 69fd9639204d05e4b8865a2c9fc942eb, type: 3}
+  itemName: "\uD0C0\uC6CC \uD790\uD329"

@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58556d4f7b8430c419702ad2c8c5ee75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muteImage: {fileID: 2126595600, guid: bd7dd2608b5a5734083103b95fe1ddd0, type: 3}
+  muteImage: {fileID: 21300000, guid: 98d3427bcdf3b5b499b7b714ed536eec, type: 3}
   nomalImage: {fileID: 21300000, guid: 85783749e17590e4ea89ea70b8c4aa7e, type: 3}
   volumeImage: {fileID: 678670205}
   volumeSlider: {fileID: 896426670}

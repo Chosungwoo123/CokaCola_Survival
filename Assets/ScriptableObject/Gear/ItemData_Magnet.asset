@@ -44,5 +44,5 @@ MonoBehaviour:
     itemCount: 0
     weaponMoveSpeed: 0
   projectile: {fileID: 0}
-  itemIcon: {fileID: 21300000, guid: 246d7c7c8e9e6cf43893ae13c5a81bdf, type: 3}
+  itemIcon: {fileID: 21300000, guid: 8fb01c556c5dab145a68a16e7c8dbd58, type: 3}
   itemName: "\uC790\uC11D"
