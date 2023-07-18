@@ -663,46 +663,46 @@ MonoBehaviour:
   - {fileID: 7417171673500355707, guid: eb1c7018e7057354b9a41cfe2618703d, type: 3}
   - {fileID: 4376735893862407210, guid: f6d2e57fee64c2449a271d02df729eb1, type: 3}
   spawnDatas:
-  - spawnTime: 4
-    health: 60
+  - spawnTime: 4.5
+    health: 45
     speed: 1.5
-    attackDamage: 10
-  - spawnTime: 3.4
-    health: 70
+    attackDamage: 5
+  - spawnTime: 4
+    health: 50
     speed: 1.8
-    attackDamage: 10
+    attackDamage: 5
   - spawnTime: 3
-    health: 75
+    health: 50
     speed: 2
-    attackDamage: 15
+    attackDamage: 7
   - spawnTime: 2
-    health: 80
+    health: 60
     speed: 2.2
-    attackDamage: 15
+    attackDamage: 7
   - spawnTime: 1.5
-    health: 80
+    health: 60
     speed: 2.4
-    attackDamage: 15
+    attackDamage: 7
   - spawnTime: 1.4
-    health: 85
+    health: 65
     speed: 2.5
-    attackDamage: 20
+    attackDamage: 10
   - spawnTime: 1.3
-    health: 85
+    health: 65
     speed: 2.5
-    attackDamage: 25
+    attackDamage: 10
   - spawnTime: 1
-    health: 87
+    health: 70
     speed: 2.7
-    attackDamage: 30
+    attackDamage: 15
   - spawnTime: 0.9
-    health: 90
+    health: 70
     speed: 2.8
-    attackDamage: 30
+    attackDamage: 15
   - spawnTime: 0.8
-    health: 90
+    health: 70
     speed: 2.8
-    attackDamage: 30
+    attackDamage: 15
   spawnPoints:
   - {fileID: 768537601}
   - {fileID: 800508977}
@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2190,6 +2190,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PistolStage1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 149937485}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &207140085
@@ -3159,7 +3171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3352,6 +3364,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PistolStage1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 149937485}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &396668037
@@ -3849,6 +3873,18 @@ MonoBehaviour:
           m_StringArgument: TitleScene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 149937485}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450425648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,7 +4067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19543,7 +19579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20145,7 +20181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21242,7 +21278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21462,7 +21498,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_Sprite: {fileID: 319219140, guid: 3688acbed5d51054e8af2d8f96230e88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31268,6 +31304,18 @@ MonoBehaviour:
           m_StringArgument: TitleScene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 149937485}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1001666968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31526,7 +31574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31911,7 +31959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31941,7 +31989,7 @@ GameObject:
   - component: {fileID: 1105344185}
   - component: {fileID: 1105344187}
   - component: {fileID: 1105344188}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -33399,7 +33447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33856,6 +33904,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: TitleScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 149937485}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1359129854
@@ -54411,7 +54471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -56220,7 +56280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dbea886fa2fe7240b8725ecd26047ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 223ed158934570c46b41a2e58107dd9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -56791,7 +56851,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -62331,7 +62391,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 8d230f11022e2364b8f37ddf0e082882, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
