@@ -43,7 +43,7 @@ public class Tower : MonoBehaviour
     
     public void HealHP(float rate)
     {
-        curHealth = Mathf.Min(curHealth + (curHealth * (rate / 100)), maxHealth);
+        curHealth = Mathf.Min(curHealth + (maxHealth * (rate / 100)), maxHealth);
 
         hpImage.fillAmount = curHealth / maxHealth;
     }
