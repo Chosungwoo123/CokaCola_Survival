@@ -32109,7 +32109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24593dde3d3d8b34cb61e4629c4ba38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 700
   hpImage: {fileID: 489975333}
   hitEffect: {fileID: 485017213}
   hitSound: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
