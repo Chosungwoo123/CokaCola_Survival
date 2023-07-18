@@ -96,18 +96,6 @@ public class PlayerPistol : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        if (x != 0)
-        {
-            
-        }
-        
-        if (y != 0)
-        {
-        }
-        
-        GameManager.Instance.playerInputX = x;
-        GameManager.Instance.playerInputY = y;
-
         if (x != 0 || y != 0)
         {
             isRun = true;
@@ -118,6 +106,18 @@ public class PlayerPistol : MonoBehaviour
         }
 
         Vector3 movePos = new Vector2(x, y) * (curMoveSpeed * Time.deltaTime);
+        
+        if (!GameManager.Instance.CheckBorderX(movePos.x + transform.position.x, 1))
+        {
+            movePos.x = 0;
+        }
+        if (!GameManager.Instance.CheckBorderY(movePos.y + transform.position.y, 1))
+        {
+            movePos.y = 0;
+        }
+        
+        GameManager.Instance.playerInputX = x;
+        GameManager.Instance.playerInputY = y;
 
         transform.position += movePos;
     }

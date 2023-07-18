@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
     [Space(10)] [Header("오디오 관련")] 
     [SerializeField] private AudioClip bgm;
     [SerializeField] private AudioClip stageClearSound;
+
+    [Space(10)] [Header("영역제한")] 
+    [SerializeField] private Vector2 border;
     
     [HideInInspector] public int enemyDieCount;
     [HideInInspector] public int curExp = 0;
@@ -195,5 +198,32 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.PlaySound(stageClearSound,1f);
         stageClearScoreText.text = $"스코어 : {enemyDieCount}";
         stageClearObj.SetActive(true);
+    }
+    
+    public bool CheckBorderX(float x, float radius)
+    {
+        if (border.x == 0)
+        {
+            return true;
+        }
+        
+        return border.x / 2 > x + radius && -border.x / 2 < x - radius;
+    }
+
+    public bool CheckBorderY(float y, float radius)
+    {
+        if (border.y == 0)
+        {
+            return true;
+        }
+        
+        return border.y / 2 > y + radius && -border.y / 2 < y - radius;
+    }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+
+        Gizmos.DrawWireCube(Vector2.zero, border);
     }
 }
