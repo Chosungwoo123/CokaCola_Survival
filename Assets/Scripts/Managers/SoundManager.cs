@@ -76,7 +76,11 @@ public class SoundManager : MonoBehaviour
     IEnumerator StopSound(GameObject soundObj, float delay)
     {
         yield return new WaitForSeconds(delay);
-        soundObj.SetActive(false);
+
+        if (soundObj != null)
+        {
+            soundObj.SetActive(false);
+        }
     }
 
     public void PlayMusic(AudioClip clip)

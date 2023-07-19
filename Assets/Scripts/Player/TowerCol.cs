@@ -27,19 +27,19 @@ public class TowerCol : MonoBehaviour
     {
         float a = 1f;
 
-        while (a > 0.5f)
+        while (a > 0.4f)
         {
             towerSR.color = new Vector4(towerSR.color.r, towerSR.color.g, towerSR.color.b, a);
             a -= Time.deltaTime * 3;
             yield return null;
         }
         
-        towerSR.color = new Vector4(towerSR.color.r, towerSR.color.g, towerSR.color.b, 0.5f);
+        towerSR.color = new Vector4(towerSR.color.r, towerSR.color.g, towerSR.color.b, 0.4f);
     }
     
     private IEnumerator FadeIn()
     {
-        float a = 0.5f;
+        float a = 0.4f;
 
         while (a < 1f)
         {

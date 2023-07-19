@@ -2186,8 +2186,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800541660}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -2198,12 +2198,12 @@ MonoBehaviour:
           m_StringArgument: PistolStage1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 149937485}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0a9feb71bfcacc244a914217cb510695, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3454,8 +3454,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155523485}
-        m_TargetAssemblyTypeName: ClearMenu, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -3466,12 +3466,12 @@ MonoBehaviour:
           m_StringArgument: PistolStage1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 149937485}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0a9feb71bfcacc244a914217cb510695, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3961,8 +3961,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1592018211}
-        m_TargetAssemblyTypeName: StopMenu, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -3973,12 +3973,12 @@ MonoBehaviour:
           m_StringArgument: TitleScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 149937485}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0a9feb71bfcacc244a914217cb510695, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -21020,7 +21020,6 @@ GameObject:
   - component: {fileID: 800541659}
   - component: {fileID: 800541662}
   - component: {fileID: 800541661}
-  - component: {fileID: 800541660}
   m_Layer: 5
   m_Name: GameOverWindow
   m_TagString: Untagged
@@ -21042,26 +21041,13 @@ RectTransform:
   m_Children:
   - {fileID: 903197797}
   m_Father: {fileID: 1723797284}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &800541660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800541658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da19e5ce8164894992b3ee9561136cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!114 &800541661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31170,7 +31156,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1723797284}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31392,8 +31378,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800541660}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -31404,12 +31390,12 @@ MonoBehaviour:
           m_StringArgument: TitleScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 149937485}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0a9feb71bfcacc244a914217cb510695, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -32510,7 +32496,6 @@ GameObject:
   - component: {fileID: 1155523481}
   - component: {fileID: 1155523484}
   - component: {fileID: 1155523483}
-  - component: {fileID: 1155523485}
   m_Layer: 5
   m_Name: ClearMenu
   m_TagString: Untagged
@@ -32537,7 +32522,7 @@ RectTransform:
   - {fileID: 1374982309}
   - {fileID: 1326360470}
   m_Father: {fileID: 1723797284}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -32582,19 +32567,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155523480}
   m_CullTransparentMesh: 1
---- !u!114 &1155523485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155523480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c4527b5e23a347479088f852b132d07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1001 &1168592205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34016,8 +33988,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155523485}
-        m_TargetAssemblyTypeName: ClearMenu, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -34028,12 +34000,12 @@ MonoBehaviour:
           m_StringArgument: TitleScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 149937485}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+      - m_Target: {fileID: 1992734425}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 0a9feb71bfcacc244a914217cb510695, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -54322,7 +54294,6 @@ GameObject:
   - component: {fileID: 1592018208}
   - component: {fileID: 1592018210}
   - component: {fileID: 1592018209}
-  - component: {fileID: 1592018211}
   m_Layer: 5
   m_Name: StopMenu
   m_TagString: Untagged
@@ -54348,7 +54319,7 @@ RectTransform:
   - {fileID: 144031821}
   - {fileID: 1535773783}
   m_Father: {fileID: 1723797284}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -54393,19 +54364,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592018207}
   m_CullTransparentMesh: 1
---- !u!114 &1592018211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592018207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea5ebd6fa12f3e4985764416d77e5e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
 --- !u!1 &1608075767
 GameObject:
   m_ObjectHideFlags: 0
@@ -55238,6 +55196,7 @@ RectTransform:
   - {fileID: 277694497}
   - {fileID: 634178736}
   - {fileID: 1201920301}
+  - {fileID: 1992734426}
   - {fileID: 1592018208}
   - {fileID: 800541659}
   - {fileID: 1155523481}
@@ -56646,6 +56605,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6709771633611217213, guid: a7201fe8a5e848b4f8d28160f48bc6d3, type: 3}
   m_PrefabInstance: {fileID: 1424133376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1992734424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992734426}
+  - component: {fileID: 1992734425}
+  m_Layer: 5
+  m_Name: MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1992734425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992734424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a796af9aab35bf24685035d021cb79bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 11400000, guid: b0126e1e0c6c2a04895d564bd230dfb9, type: 2}
+--- !u!224 &1992734426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992734424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723797284}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1993125858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6709771633611217213, guid: a7201fe8a5e848b4f8d28160f48bc6d3, type: 3}
